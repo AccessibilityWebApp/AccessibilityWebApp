@@ -1,0 +1,6 @@
+@AccessibilityWebApp.Server_HostAddress = http://localhost:5063
+
+GET {{AccessibilityWebApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

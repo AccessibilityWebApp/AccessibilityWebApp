@@ -1,0 +1,244 @@
+﻿    :root {
+    --text-font-family: "Inter-Regular", Helvetica;
+    --text-font-size: 24px;
+    --text-font-style: normal;
+    --text-font-weight: 400;
+    --text-letter-spacing: 0px;
+    --text-line-height: normal;
+    }
+
+    body {
+    min-width: 1440px;
+    min-height: 1024px; 
+    margin: 0; 
+    overflow: hidden; 
+    }
+
+    .inlogpagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 1440px; 
+    min-height: 1024px; 
+    }
+
+    .inlogpagina .div {
+        background-color: #ffffff;
+        height: 1024px;
+        overflow: hidden;
+        position: relative;
+        width: 1440px;
+    }
+
+    .inlogpagina .overlap-group {
+        height: 597px;
+        left: -386px;
+        position: absolute;
+        top: -301px;
+        width: 1718px;
+    }
+
+    .inlogpagina .frame-2 {
+        background-color: #21cea1;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        bottom: -10%;
+        right: -8%;
+        width: 20vw;
+    }
+
+    .inlogpagina .frame {
+        background-color: #2b50ec;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        top: -15%;
+        left: -10%; 
+        width: 20vw;
+    }
+
+    .inlogpagina .frame-3 {
+        background-image: url(./assets/logo.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 206px;
+        left: 494px;
+        position: absolute;
+        top: 391px;
+        width: 1224px;
+    }
+
+    .inlogpagina .frame-4 {
+        align-items: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px 32px;
+        left: 451px;
+        position: absolute;
+        top: 300px;
+        width: 565px;
+    }
+
+    .inlogpagina .frame-5 {
+        height: 28px;
+        position: relative;
+        width: 543px;
+    }
+
+    .inlogpagina .frame-6 {
+        height: 72px;
+        position: relative;
+        width: 543px;
+    }
+
+    .inlogpagina .frame-7 {
+        height: 24px;
+        position: relative;
+        width: 543px;
+    }
+
+    .inlogpagina .frame-8 {
+        height: 24px;
+        position: relative;
+        width: 543px;
+    }
+
+    .inlogpagina .text-wrapper {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 40px;
+        font-weight: 400;
+        height: 45px;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -1px;
+        position: relative;
+        white-space: nowrap;
+        width: 537px;
+    }
+
+    .inlogpagina .entry-box {
+        background-color: #ffffff;
+        font-size: 24px;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 60px;
+        position: relative;
+        width: 537px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .inlogpagina .img {
+        height: 26px;
+        position: relative;
+        width: 28px;
+    }
+
+    .inlogpagina .text-wrapper-2 {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 56px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        top: 1px;
+        white-space: nowrap;
+        width: 146px;
+    }
+
+    .inlogpagina .checkbox {
+        height: 28px;
+        width: 28px;
+    }
+
+    .inlogpagina .rectangle {
+        background-color: #2b50ec;
+        color: #ffffff;
+        font-size: 24px;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 15px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        position: absolute;
+    }
+
+    .inlogpagina .rectangle2 {
+        font-family: "ABeeZee-Regular", Helvetica;
+        background-color: #2b50ec;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 15px;
+        height: 72px;
+        position: absolute;
+        width: 240px;
+        color: #ffffff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inlogpagina .rectangle3 {
+        font-family: "ABeeZee-Regular", Helvetica;
+        background-color: #2b50ec;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 15px;
+        height: 72px;
+        position: absolute;
+        width: 240px;
+        color: #ffffff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 317px;
+    }
+
+    .inlogpagina .text-wrapper-3 {
+        color: #2441dd;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 288px;
+        line-height: normal;
+        position: absolute;
+        white-space: nowrap;
+        width: 184px;
+    }
+
+    .inlogpagina .text-wrapper-4 {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        width: 292px;
+    }
+
+    .inlogpagina .text-wrapper-5 {
+        color: #2441dd;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        white-space: nowrap;
+        width: 184px;
+    }
+
+    .inlogpagina .rectangle2:hover,
+    .inlogpagina .rectangle3:hover {
+        background-color: #1e407d;
+        cursor: pointer;
+    }
