@@ -24,7 +24,7 @@ jobs:
         run: nuget restore
 
       - name: Build and publish
-        run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
+        run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="Properties\PublishProfiles\AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
