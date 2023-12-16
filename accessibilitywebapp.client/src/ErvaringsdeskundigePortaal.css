@@ -1,3 +1,11 @@
+.frame {
+    border: 2px solid #ccc; /* Customize the frame border */
+    padding: 10px; /* Customize the frame padding */
+    margin: 10px; /* Customize the frame margin */
+}
+    .frame.desktop {
+        /* Add your desktop-specific styling here */
+    }
 .ervaringsdeskundige {
     background-color: #ffffff;
     display: flex;
