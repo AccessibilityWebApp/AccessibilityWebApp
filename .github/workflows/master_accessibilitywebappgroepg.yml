@@ -11,7 +11,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Setup MSBuild path
         uses: microsoft/setup-msbuild@v1.0.2
@@ -36,7 +37,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: ${{ needs.build.outputs['webapp-url'] }}
     
     steps:
       - name: Download artifact from build job
@@ -52,3 +53,6 @@ jobs:
           slot-name: 'Production'
           package: './published/**/*.zip'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
+
+      - name: Set environment variable for downstream jobs
+        run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV]
