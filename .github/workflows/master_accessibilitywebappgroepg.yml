@@ -37,7 +37,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ needs.build.outputs['webapp-url'] }}
+      url: https://accessibilitywebappgroepg.azurewebsites.net/
     
     steps:
       - name: Download artifact from build job
@@ -55,4 +55,4 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
 
       - name: Set environment variable for downstream jobs
-        run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV]
+        run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV
