@@ -3,7 +3,7 @@ name: Build and deploy ASP app to Azure Web App - AccessibilityWebAppGroepG
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -23,12 +23,12 @@ jobs:
         run: nuget restore
 
       - name: Build and publish
-        run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="\published\"
+        run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: ASP-app
+          name: AccessibilityWebAppGroepG
           path: '/published/**'
 
   deploy:
@@ -42,7 +42,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: ASP-app
+          name: AccessibilityWebAppGroepG
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
