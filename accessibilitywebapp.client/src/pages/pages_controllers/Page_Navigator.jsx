@@ -39,7 +39,7 @@ const PageNavigator = () => {
             {currentPage === 'login' && ( <Login handleToAanmeldClick={handleToAanmeld} handleToPortalClick={handleToPortal} userType={userType} /> )}
             {currentPage === 'expert_signup' && <ExpertSignUp handleToLoginClick={handleToLogin} />}
             {currentPage === 'company_signup' && <CompanySignUp handleToLoginClick={handleToLogin} />}
-            {currentPage === 'expert_portal' && <ExpertPortal handleToExpertPortal={handleToExpertPortal} />}
+            {currentPage === 'expert_portal' && <ExpertPortal handleToExpertPortalClick={handleToExpertPortal} />}
         </>
     );
 };
