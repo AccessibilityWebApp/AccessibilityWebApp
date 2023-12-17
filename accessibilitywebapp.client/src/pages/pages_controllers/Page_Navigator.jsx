@@ -4,6 +4,7 @@ import Login from '@/pages/screens/Login.jsx';
 import ExpertSignUp from '@/pages/screens/ExpertSignUp.jsx';
 import CompanySignUp from '@/pages/screens/CompanySignUp.jsx';
 import PortaalKeuze from '@/pages/screens/Portal_Keuze.jsx';
+import ExpertPortal from '@/pages/screens/ExpertPortal.jsx'
 
 const PageNavigator = () => {
     const [userType, setUserType] = useState(null);
@@ -23,6 +24,9 @@ const PageNavigator = () => {
 
     const handleToPortal = () => {
         navigate('/portal');
+    };
+    const handleToExpertPortal = () => {
+        setCurrentPage('ExpertPortal');
     };
 
     const handlePortalButtonClick = (selectedUserType) => {
