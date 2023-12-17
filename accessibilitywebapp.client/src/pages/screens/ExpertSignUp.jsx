@@ -11,8 +11,8 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
         handleSoortChange,
         handleApproachChange,
         handleRemoveType,
-        showAdditionalBoxes,
         handleAgeChange,
+        showAdditionalBoxes,
     } = ExpertSignUpController();
 
     return (
@@ -33,6 +33,7 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
                     <input className="surname" type="text" placeholder="Achternaam" />
                     <input className="zip" type="text" placeholder="Postcode" />
 
+                    
                     <select className="age" onChange={handleAgeChange}>
                         <option value="" disabled selected hidden>Leeftijdsgroep</option>
                         <option value="18-">18-</option>
@@ -57,7 +58,7 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
                                         <span className="dot">&#8226;</span>
                                         <div className="type-text">{type}</div>
                                     </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(type, handleApproachChange)}>X</button>
+                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'approach')}>X</button>
                                 </div>
                             ))}
                         </div>
@@ -80,7 +81,7 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
                                         <span className="dot">&#8226;</span>
                                         <div className="type-text">{type}</div>
                                     </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(type, handleSoortChange)}>X</button>
+                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'soort')}>X</button>
                                 </div>
                             ))}
                         </div>
@@ -102,7 +103,7 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
                                         <span className="dot">&#8226;</span>
                                         <div className="type-text">{type}</div>
                                     </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(type, handleTypeChange)}>X</button>
+                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'type')}>X</button>
                                 </div>
                             ))}
                         </div>

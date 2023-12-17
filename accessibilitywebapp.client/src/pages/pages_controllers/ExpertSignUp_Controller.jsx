@@ -4,7 +4,7 @@ export const ExpertSignUpController = () => {
     const [selectedTypesApproach, setSelectedTypesApproach] = useState([]);
     const [selectedTypesSoort, setSelectedTypesSoort] = useState([]);
     const [selectedTypesType, setSelectedTypesType] = useState([]);
-    const maxTypesAllowed = 4;
+    const maxTypesAllowed = 5;
 
     const handleTypeChange = (event) => {
         const selectedType = event.target.value;
@@ -16,9 +16,9 @@ export const ExpertSignUpController = () => {
     };
 
     const handleSoortChange = (event) => {
-        const selectedSoort = event.target.value;
+        const selectedSoort = event?.target?.value;
 
-        if (!selectedTypesSoort.includes(selectedSoort) && selectedTypesSoort.length < maxTypesAllowed) {
+        if (selectedSoort && !selectedTypesSoort.includes(selectedSoort) && selectedTypesSoort.length < maxTypesAllowed) {
             setSelectedTypesSoort([...selectedTypesSoort, selectedSoort]);
             event.target.value = "";
         }
@@ -33,12 +33,31 @@ export const ExpertSignUpController = () => {
         }
     };
 
-    const handleRemoveType = (type, arraySetter) => {
-        const newSelectedTypes = [...arraySetter];
-        const index = newSelectedTypes.indexOf(type);
-        if (index !== -1) {
-            newSelectedTypes.splice(index, 1);
-            arraySetter(newSelectedTypes);
+    const handleRemoveType = (index, type) => {
+        switch (type) {
+            case 'approach':
+                setSelectedTypesApproach((prevTypes) => {
+                    const newTypes = [...prevTypes];
+                    newTypes.splice(index, 1);
+                    return newTypes;
+                });
+                break;
+            case 'soort':
+                setSelectedTypesSoort((prevTypes) => {
+                    const newTypes = [...prevTypes];
+                    newTypes.splice(index, 1);
+                    return newTypes;
+                });
+                break;
+            case 'type':
+                setSelectedTypesType((prevTypes) => {
+                    const newTypes = [...prevTypes];
+                    newTypes.splice(index, 1);
+                    return newTypes;
+                });
+                break;
+            default:
+                break;
         }
     };
 
