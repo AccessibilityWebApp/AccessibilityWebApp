@@ -1,5 +1,4 @@
-// Portaalkeuze.jsx
-import React from "react";
+import PropTypes from "prop-types";
 import "@/pages/pages_css/Portal_Keuze.css";
 
 const Portaalkeuze = ({ handlePortalButtonClick }) => {
@@ -33,6 +32,10 @@ const Portaalkeuze = ({ handlePortalButtonClick }) => {
             </div>
         </div>
     );
+};
+
+Portaalkeuze.propTypes = {
+    handlePortalButtonClick: PropTypes.func.isRequired,
 };
 
 export default Portaalkeuze;

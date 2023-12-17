@@ -1,11 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
 import PageNavigator from '@/pages/pages_controllers/Page_Navigator';
 
+const root = document.getElementById('root');
 
-ReactDOM.render(
+const renderRoot = createRoot(root);
+
+renderRoot.render(
     <React.StrictMode>
-        <PageNavigator />
-    </React.StrictMode>,
-    document.getElementById('root')
+        <Router>
+            <PageNavigator />
+        </Router>
+    </React.StrictMode>
 );

@@ -34,7 +34,7 @@
         top: -15%;
         left: -10%; 
         width: 20vw;
-        z-index: 0;
+        z-index: 1;
     }
 
     .expertsignup .frame-3 {
