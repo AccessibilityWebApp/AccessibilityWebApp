@@ -1,8 +1,8 @@
-import React from 'react';
+import PropTypes from "prop-types";
 import "@/pages/pages_css/ExpertSignUp.css";
 import ExpertSignUpController from '@/pages/pages_controllers/ExpertSignUp_Controller';
 
-export const ExpertSignUp = ({ handleToLoginClick }) => {
+export const ExpertSignUp = ({ handleToLogin }) => {
     const {
         selectedTypesApproach,
         selectedTypesSoort,
@@ -130,7 +130,7 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
                     <div className="frame-6">
                         <div className="overlap-group">
                             <div className="text-wrapper-2">Heb je al een account?</div>
-                            <div className="login" onClick={handleToLoginClick}>Log hier in</div>
+                            <div className="login" onClick={handleToLogin}>Log hier in</div>
                         </div>
                     </div>
                     <div className="frame-7">
@@ -140,6 +140,10 @@ export const ExpertSignUp = ({ handleToLoginClick }) => {
             </div>
         </div>
     );
+};
+
+ExpertSignUp.propTypes = {
+    handleToLogin: PropTypes.func.isRequired,
 };
 
 export default ExpertSignUp;

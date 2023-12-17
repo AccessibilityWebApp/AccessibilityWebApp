@@ -1,7 +1,7 @@
-import React from "react";
+import PropTypes from "prop-types";
 import "@/pages/pages_css/CompanySignUp.css";
 
-export const CompanySignUp = ({ handleToLoginClick }) => {
+export const CompanySignUp = ({ handleToLogin }) => {
     return (
         <div className="aanmeldingspagina">
             <div className="div">
@@ -30,12 +30,16 @@ export const CompanySignUp = ({ handleToLoginClick }) => {
                     </div>
                     <div className="login">
                         <div className="account">Heb je al een account?</div>
-                        <div className="loginbutton" onClick={handleToLoginClick}>Log hier in</div>
+                        <div className="loginbutton" onClick={handleToLogin}>Log hier in</div>
                     </div>
                 </div>
             </div>
         </div>
     );
+};
+
+CompanySignUp.propTypes = {
+    handleToLogin: PropTypes.func.isRequired,
 };
 
 export default CompanySignUp;

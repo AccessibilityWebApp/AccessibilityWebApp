@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Login from '@/pages/screens/Login.jsx';
 import ExpertSignUp from '@/pages/screens/ExpertSignUp.jsx';
 import CompanySignUp from '@/pages/screens/CompanySignUp.jsx';
 import PortaalKeuze from '@/pages/screens/Portal_Keuze.jsx';
 
 const PageNavigator = () => {
-    const [currentPage, setCurrentPage] = useState('portal');
     const [userType, setUserType] = useState(null);
+    const navigate = useNavigate();
 
     const handleToLogin = () => {
-        setCurrentPage('login');
+        navigate('/login');
     };
 
     const handleToAanmeld = () => {
         if (userType === 'expert') {
-            setCurrentPage('expert_signup');
+            navigate('/expert_signup');
         } else if (userType === 'company') {
-            setCurrentPage('company_signup');
+            navigate('/company_signup');
         }
     };
 
     const handleToPortal = () => {
-        setCurrentPage('portal');
+        navigate('/portal');
     };
 
     const handlePortalButtonClick = (selectedUserType) => {
@@ -30,12 +31,15 @@ const PageNavigator = () => {
     };
 
     return (
-        <>
-            {currentPage === 'portal' && ( <PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />)}
-            {currentPage === 'login' && ( <Login handleToAanmeldClick={handleToAanmeld} handleToPortalClick={handleToPortal} userType={userType} /> )}
-            {currentPage === 'expert_signup' && <ExpertSignUp handleToLoginClick={handleToLogin} />}
-            {currentPage === 'company_signup' && <CompanySignUp handleToLoginClick={handleToLogin} />}
-        </>
+        <div>
+            <Routes>
+                <Route path="/login" element={<Login handleToAanmeld={handleToAanmeld} handleToPortal={handleToPortal} userType={userType} />} />
+                <Route path="/expert_signup" element={<ExpertSignUp handleToLogin={handleToLogin} />} />
+                <Route path="/company_signup" element={<CompanySignUp handleToLogin={handleToLogin} />} />
+                <Route path="/portal" element={<PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />} />
+                <Route index element={<Navigate to="/portal" />} />
+            </Routes>
+        </div>
     );
 };
 
