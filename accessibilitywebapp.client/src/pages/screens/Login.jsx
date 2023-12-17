@@ -1,7 +1,7 @@
 import React from 'react';
 import "@/pages/pages_css/Login.css";
 
-export const Login = ({ handleToAanmeldClick, handleToPortalClick }) => {
+export const Login = ({ handleToAanmeldClick, handleToPortalClick, handleToExpertPortal}) => {
     return (
         <div className="inlogpagina">
             <div className="div">
@@ -37,7 +37,7 @@ export const Login = ({ handleToAanmeldClick, handleToPortalClick }) => {
 
                         <div className="frame-6">
                             <div className="rectangle2" onClick={handleToPortalClick}>Terug</div>
-                            <div className="rectangle3">Volgende</div>
+                            <div className="rectangle3" onClick={handleToExpertPortal}>Volgende</div>
                         </div>
 
                         <div className="frame-7">

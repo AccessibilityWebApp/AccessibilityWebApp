@@ -3,6 +3,7 @@ import Login from '@/pages/screens/Login.jsx';
 import ExpertSignUp from '@/pages/screens/ExpertSignUp.jsx';
 import CompanySignUp from '@/pages/screens/CompanySignUp.jsx';
 import PortaalKeuze from '@/pages/screens/Portal_Keuze.jsx';
+import ExpertPortal from '@/pages/screens/ExpertPortal.jsx'
 
 const PageNavigator = () => {
     const [currentPage, setCurrentPage] = useState('portal');
@@ -23,6 +24,9 @@ const PageNavigator = () => {
     const handleToPortal = () => {
         setCurrentPage('portal');
     };
+    const handleToExpertPortal = () => {
+        setCurrentPage('ExpertPortal');
+    };
 
     const handlePortalButtonClick = (selectedUserType) => {
         setUserType(selectedUserType);
@@ -35,6 +39,7 @@ const PageNavigator = () => {
             {currentPage === 'login' && ( <Login handleToAanmeldClick={handleToAanmeld} handleToPortalClick={handleToPortal} userType={userType} /> )}
             {currentPage === 'expert_signup' && <ExpertSignUp handleToLoginClick={handleToLogin} />}
             {currentPage === 'company_signup' && <CompanySignUp handleToLoginClick={handleToLogin} />}
+            {currentPage === 'expert_portal' && <ExpertPortal handleToExpertPortal={handleToExpertPortal} />}
         </>
     );
 };
