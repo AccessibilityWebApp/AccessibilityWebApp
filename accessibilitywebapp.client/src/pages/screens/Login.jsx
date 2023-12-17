@@ -1,7 +1,7 @@
-import React from "react";
-import "./Login.css";
+import React from 'react';
+import "@/pages/pages_css/Login.css";
 
-export const Login = () => {
+export const Login = ({ handleToAanmeldClick, handleToPortalClick }) => {
     return (
         <div className="inlogpagina">
             <div className="div">
@@ -36,7 +36,7 @@ export const Login = () => {
                         </div>
 
                         <div className="frame-6">
-                            <div className="rectangle2">Terug</div>
+                            <div className="rectangle2" onClick={handleToPortalClick}>Terug</div>
                             <div className="rectangle3">Volgende</div>
                         </div>
 
@@ -45,10 +45,8 @@ export const Login = () => {
                         </div>
 
                         <div className="frame-8">
-                            <div className="text-wrapper-4">
-                                Heb je nog geen account?
-                            </div>
-                            <div className="text-wrapper-3">Meld je hier aan</div>
+                            <div className="text-wrapper-4">Heb je nog geen account?</div>
+                            <div className="aanmelden" onClick={handleToAanmeldClick}>Meld je hier aan</div>
                         </div>
                     </div>
                 </div>
@@ -56,3 +54,5 @@ export const Login = () => {
         </div>
     );
 };
+
+export default Login;

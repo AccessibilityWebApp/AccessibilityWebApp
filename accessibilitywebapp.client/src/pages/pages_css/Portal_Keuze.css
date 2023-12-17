@@ -1,0 +1,211 @@
+.portaalkeuze {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+    .portaalkeuze .overlap-wrapper {
+        background-color: #ffffff;
+        height: 1024px;
+        overflow: hidden;
+        width: 1440px;
+    }
+
+    .portaalkeuze .overlap {
+        height: 1557px;
+        left: -387px;
+        position: relative;
+        top: -294px;
+        width: 2081px;
+    }
+
+    .portaalkeuze .whole {
+        height: 710px;
+        left: 495px;
+        position: absolute;
+        top: 377px;
+        width: 1224px;
+    }
+
+    .portaalkeuze .buttons {
+        height: 398px;
+        left: 47px;
+        position: absolute;
+        top: 312px;
+        width: 1125px;
+    }
+
+    .portaalkeuze .company {
+        background-color: #131b56;
+        border-radius: 15px;
+        height: 398px;
+        left: 628px;
+        position: absolute;
+        top: 0;
+        width: 493px;
+    }
+
+    .portaalkeuze .title {
+        color: #ffffff;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 199px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        text-shadow: 0px 4px 4px #00000040;
+        top: 20px;
+        white-space: nowrap;
+        width: 89px;
+    }
+
+    .portaalkeuze .company-icon {
+        background-image: url(./company_icon.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 131px;
+        left: 178px;
+        object-fit: cover;
+        position: absolute;
+        top: 107px;
+        width: 131px;
+    }
+
+    .portaalkeuze .company-desc {
+        color: #ffffff;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 21px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 281px;
+        width: 444px;
+    }
+
+    .portaalkeuze .experts {
+        background-color: #131b56;
+        border-radius: 15px;
+        height: 398px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 493px;
+    }
+
+    .portaalkeuze .text-wrapper {
+        color: #ffffff;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 126px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        text-shadow: 0px 4px 4px #00000040;
+        top: 24px;
+        white-space: nowrap;
+        width: 249px;
+    }
+
+    .portaalkeuze .people-icon {
+        background-image: url(./people_icon.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 146px;
+        left: 155px;
+        object-fit: cover;
+        position: absolute;
+        top: 107px;
+        width: 192px;
+    }
+
+    .portaalkeuze .expert-desc {
+        color: #ffffff;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 0;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 283px;
+        width: 493px;
+    }
+
+    .portaalkeuze .logo-and-title {
+        height: 246px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 1224px;
+    }
+
+    .portaalkeuze .overlap-group {
+        height: 245px;
+        position: relative;
+    }
+
+    .portaalkeuze .logo {
+        background-image: url(./logo.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 206px;
+        position: absolute;
+        width: 1224px;
+    }
+
+    .portaalkeuze .div {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 64px;
+        font-weight: 400;
+        left: 363px;
+        letter-spacing: 0;
+        line-height: normal;
+        opacity: 0.7;
+        position: absolute;
+        text-align: center;
+        top: 173px;
+        white-space: nowrap;
+        width: 535px;
+    }
+
+    .portaalkeuze .circle-blue {
+        background-color: #2b50ec;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        top: -15%;
+        left: -10%;
+        width: 20vw;
+    }
+
+    .portaalkeuze .circle-green {
+        background-color: #21cea1;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        bottom: -10%;
+        right: -8%;
+        width: 20vw;
+    }
+
+        .portaalkeuze .company:hover,
+        .portaalkeuze .experts:hover,
+        .portaalkeuze .company:active,
+        .portaalkeuze .experts:active {
+            background-color: #0F1544;
+            cursor: pointer;
+        }
+
+        .portaalkeuze .company:active,
+        .portaalkeuze .experts:active {
+            background-color: #0A0E33;
+        }

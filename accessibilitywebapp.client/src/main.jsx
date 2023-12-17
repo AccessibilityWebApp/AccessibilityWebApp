@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Login } from './Login.jsx';
+import PageNavigator from '@/pages/pages_controllers/Page_Navigator';
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <Login />
+        <PageNavigator />
     </React.StrictMode>,
     document.getElementById('root')
 );
-

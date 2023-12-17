@@ -59,7 +59,7 @@
     }
 
     .inlogpagina .frame-3 {
-        background-image: url(./assets/logo.png);
+        background-image: url(./logo.png);
         background-position: 50% 50%;
         background-size: cover;
         height: 206px;
@@ -131,12 +131,6 @@
         padding-right: 10px;
     }
 
-    .inlogpagina .img {
-        height: 26px;
-        position: relative;
-        width: 28px;
-    }
-
     .inlogpagina .text-wrapper-2 {
         color: #000000;
         font-family: "ABeeZee-Regular", Helvetica;
@@ -172,7 +166,6 @@
     }
 
     .inlogpagina .rectangle2 {
-        font-family: "ABeeZee-Regular", Helvetica;
         background-color: #2b50ec;
         border: 1px solid;
         border-color: #000000;
@@ -185,6 +178,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "ABeeZee-Regular", Helvetica;
     }
 
     .inlogpagina .rectangle3 {
@@ -204,7 +198,7 @@
         left: 317px;
     }
 
-    .inlogpagina .text-wrapper-3 {
+    .inlogpagina .aanmelden {
         color: #2441dd;
         font-family: "ABeeZee-Regular", Helvetica;
         font-size: 24px;
@@ -237,8 +231,28 @@
         width: 184px;
     }
 
-    .inlogpagina .rectangle2:hover,
-    .inlogpagina .rectangle3:hover {
-        background-color: #1e407d;
-        cursor: pointer;
-    }
+        .inlogpagina .rectangle2:hover,
+        .inlogpagina .rectangle3:hover,
+        .inlogpagina .rectangle2:active,
+        .inlogpagina .rectangle3:active {
+            background-color: #2c579f;
+            cursor: pointer;
+        }
+
+        .inlogpagina .rectangle2:active,
+        .inlogpagina .rectangle3:active {
+            background-color: #1e407d;
+        }
+
+        .inlogpagina .aanmelden:hover,
+        .inlogpagina .text-wrapper-5:hover,
+        .inlogpagina .aanmelden:active,
+        .inlogpagina .text-wrapper-5:active {
+            color: #1e407d;
+            cursor: pointer;
+        }
+
+        .inlogpagina .aanmelden:active,
+        .inlogpagina .text-wrapper-5:active {
+            color: #2c579f;
+        }
