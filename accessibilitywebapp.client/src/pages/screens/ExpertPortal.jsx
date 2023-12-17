@@ -1,4 +1,3 @@
-import React from "react";
 import "./pages/pages_css/ExpertPortal.css";
 
 export const Ervaringsdeskundige = () => {

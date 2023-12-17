@@ -25,8 +25,9 @@ const PageNavigator = () => {
     const handleToPortal = () => {
         navigate('/portal');
     };
+
     const handleToExpertPortal = () => {
-        setCurrentPage('ExpertPortal');
+        navigate('/expert_portal');
     };
 
     const handlePortalButtonClick = (selectedUserType) => {
@@ -41,6 +42,7 @@ const PageNavigator = () => {
                 <Route path="/expert_signup" element={<ExpertSignUp handleToLogin={handleToLogin} />} />
                 <Route path="/company_signup" element={<CompanySignUp handleToLogin={handleToLogin} />} />
                 <Route path="/portal" element={<PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />} />
+                <Route path='/expert_portal' element={<ExpertPortal handleToExpertPortalClick={handleToExpertPortal} />} />
                 <Route index element={<Navigate to="/portal" />} />
             </Routes>
         </div>
