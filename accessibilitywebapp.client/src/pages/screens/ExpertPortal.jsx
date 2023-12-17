@@ -1,4 +1,4 @@
-import "./pages/pages_css/ExpertPortal.css";
+import "@/pages/pages_css/ExpertPortal.css";
 
 export const Ervaringsdeskundige = () => {
     return (
@@ -59,3 +59,4 @@ export const Ervaringsdeskundige = () => {
     );
 };
 
+export default Ervaringsdeskundige;

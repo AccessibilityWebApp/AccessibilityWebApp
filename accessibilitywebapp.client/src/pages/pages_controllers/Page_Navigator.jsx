@@ -38,11 +38,11 @@ const PageNavigator = () => {
     return (
         <div>
             <Routes>
-                <Route path="/login" element={<Login handleToAanmeld={handleToAanmeld} handleToPortal={handleToPortal} userType={userType} />} />
-                <Route path="/expert_signup" element={<ExpertSignUp handleToLogin={handleToLogin} />} />
+                <Route path="/login" element={<Login handleToAanmeld={handleToAanmeld} handleToPortal={handleToPortal} userType={userType} handleToExpertPortal={handleToExpertPortal} />} />
+                <Route path="/expert_signup" element={<ExpertSignUp handleToLogin={handleToLogin} handleToExpertPortal={handleToExpertPortal} />} />
                 <Route path="/company_signup" element={<CompanySignUp handleToLogin={handleToLogin} />} />
                 <Route path="/portal" element={<PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />} />
-                <Route path='/expert_portal' element={<ExpertPortal handleToExpertPortalClick={handleToExpertPortal} />} />
+                <Route path='/expert_portal' element={<ExpertPortal />} />
                 <Route index element={<Navigate to="/portal" />} />
             </Routes>
         </div>

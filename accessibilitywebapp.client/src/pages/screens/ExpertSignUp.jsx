@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "@/pages/pages_css/ExpertSignUp.css";
 import ExpertSignUpController from '@/pages/pages_controllers/ExpertSignUp_Controller';
 
-export const ExpertSignUp = ({ handleToLogin }) => {
+export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
     const {
         selectedTypesApproach,
         selectedTypesSoort,
@@ -134,7 +134,7 @@ export const ExpertSignUp = ({ handleToLogin }) => {
                         </div>
                     </div>
                     <div className="frame-7">
-                        <div className="rectangle2">Volgende</div>
+                        <div className="rectangle2" onClick={handleToExpertPortal}>Volgende</div>
                     </div>
                 </div>
             </div>
@@ -144,6 +144,7 @@ export const ExpertSignUp = ({ handleToLogin }) => {
 
 ExpertSignUp.propTypes = {
     handleToLogin: PropTypes.func.isRequired,
+    handleToExpertPortal: PropTypes.func.isRequired,
 };
 
 export default ExpertSignUp;
