@@ -122,6 +122,7 @@
     }
 
     .ervaringsdeskundige .image {
+        background-image: url(./logo_small.png);
         height: 63px;
         left: 54px;
         object-fit: cover;
