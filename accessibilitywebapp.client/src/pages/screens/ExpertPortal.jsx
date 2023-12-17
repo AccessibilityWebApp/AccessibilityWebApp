@@ -1,5 +1,5 @@
 import React from "react";
-import "./ExpertPortal.css";
+import "./pages/pages_css/ExpertPortal.css";
 
 export const Ervaringsdeskundige = () => {
     return (
