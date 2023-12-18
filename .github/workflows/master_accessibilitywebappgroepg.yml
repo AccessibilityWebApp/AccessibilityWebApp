@@ -6,6 +6,13 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_NAME: AccessibilityWebAppGroepG
+  AZURE_WEBAPP_SLOT_NAME: Production
+  AZURE_WEBAPP_PACKAGE_PATH: './published/**/*.zip'
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
+  WEBAPP_URL: 'https://accessibilitywebappgroepg.azurewebsites.net/'
+
 jobs:
   build:
     runs-on: windows-latest
@@ -37,7 +44,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: https://accessibilitywebappgroepg.azurewebsites.net/
+      url: ${{ env.WEBAPP_URL }}
     
     steps:
       - name: Download artifact from build job
@@ -49,10 +56,10 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'AccessibilityWebAppGroepG'
-          slot-name: 'Production'
-          package: './published/**/*.zip'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
 
       - name: Set environment variable for downstream jobs
         run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV
