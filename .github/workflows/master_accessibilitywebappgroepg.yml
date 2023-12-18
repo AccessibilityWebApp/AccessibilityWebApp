@@ -30,6 +30,14 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore
 
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install npm dependencies
+        run: npm install
+
       - name: Build and publish
         run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="Properties\PublishProfiles\AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
 
