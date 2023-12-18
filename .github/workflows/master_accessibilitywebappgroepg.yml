@@ -11,6 +11,7 @@ env:
   AZURE_WEBAPP_SLOT_NAME: Production
   AZURE_WEBAPP_PACKAGE_PATH: './published/**/*.zip'
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
+  AZURE_RESOURCE_GROUP: AccessibilityWebApp_group
   WEBAPP_URL: 'https://accessibilitywebappgroepg.azurewebsites.net/'
 
 jobs:
@@ -35,8 +36,12 @@ jobs:
         with:
           node-version: 14
 
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
       - name: Update npm dependencies on Azure Web App
-        run: az webapp deployment script --name ${{ env.AZURE_WEBAPP_NAME }} --slot ${{ env.AZURE_WEBAPP_SLOT_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --command "npm install"
+        run: az webapp deployment script --name ${{ env.AZURE_WEBAPP_NAME }} --slot ${{ env.AZURE_WEBAPP_SLOT_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --command "npm install" --output none
 
       - name: Build and publish
         run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="Properties\PublishProfiles\AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
