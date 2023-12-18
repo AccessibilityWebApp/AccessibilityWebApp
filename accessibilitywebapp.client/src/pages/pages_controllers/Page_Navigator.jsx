@@ -5,6 +5,7 @@ import ExpertSignUp from '@/pages/screens/ExpertSignUp.jsx';
 import CompanySignUp from '@/pages/screens/CompanySignUp.jsx';
 import PortaalKeuze from '@/pages/screens/Portal_Keuze.jsx';
 import ExpertPortal from '@/pages/screens/ExpertPortal.jsx'
+import AssignmentCreator from '@/pages/screens/AssignmentCreator.jsx'
 
 const PageNavigator = () => {
     const [userType, setUserType] = useState(null);
@@ -43,6 +44,7 @@ const PageNavigator = () => {
                 <Route path="/company_signup" element={<CompanySignUp handleToLogin={handleToLogin} />} />
                 <Route path="/portal" element={<PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />} />
                 <Route path='/expert_portal' element={<ExpertPortal />} />
+                <Route path='/assignment_creator' element={<AssignmentCreator />} />
                 <Route index element={<Navigate to="/portal" />} />
             </Routes>
         </div>
