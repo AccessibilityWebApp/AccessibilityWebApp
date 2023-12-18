@@ -1,22 +1,22 @@
-// AssignmentCreator.jsx
-import React from "react";
 import PropTypes from "prop-types";
 import "@/pages/pages_css/AssignmentCreator.css";
 
-const AssignmentCreator = ({ handlePortalButtonClick }) => {
+const AssignmentCreator = () => {
     return (
-        <div className="assignment-creator">
-            <div className="centered-container">
-                <input type="text" placeholder="Textbox 1" className="centered-textbox" />
-                <input type="text" placeholder="Textbox 2" className="centered-textbox second-textbox" />
-                <input type="text" placeholder="Textbox 3" className="centered-textbox" />
-                <input type="text" placeholder="Textbox 4" className="centered-textbox" />
+        <div className="assignment_creator">
+            <div className="assignment_options">
+                <input type="text" placeholder="Titel" className="assignment_textbox" />
+                <input type="text" placeholder="Beschrijf je opdracht..." className="assignment_textbox2" />
+                <input type="text" placeholder="Locatie" className="assignment_textbox" />
+                <input type="text" placeholder="Beloning" className="assignment_textbox" />
 
-                {/* Replace the last input with a dropdown list */}
-                <select className="centered-dropdown">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                <div className="green-circle" />
+                <div className="blue-circle" />
+
+                <select className="beperking_opties">
+                    <option value="Beperking(en)">Beperkingen</option>
+                    <option value="Beperking1">Blind</option>
+                    <option value="Beperking2">Doof</option>
                 </select>
             </div>
         </div>
