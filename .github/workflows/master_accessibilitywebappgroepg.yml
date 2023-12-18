@@ -35,8 +35,8 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install npm dependencies
-        run: npm install
+      - name: Update npm dependencies on Azure Web App
+        run: az webapp deployment script --name ${{ env.AZURE_WEBAPP_NAME }} --slot ${{ env.AZURE_WEBAPP_SLOT_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --command "npm install"
 
       - name: Build and publish
         run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="Properties\PublishProfiles\AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
@@ -52,22 +52,4 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ env.WEBAPP_URL }}
-    
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: AccessibilityWebAppGroepG
-      
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
-
-      - name: Set environment variable for downstream jobs
-        run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV
+  
