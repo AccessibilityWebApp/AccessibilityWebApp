@@ -1,3 +1,5 @@
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy ASP app to Azure Web App - AccessibilityWebAppGroepG
 
 on:
@@ -6,21 +8,12 @@ on:
       - master
   workflow_dispatch:
 
-env:
-  AZURE_WEBAPP_NAME: AccessibilityWebAppGroepG
-  AZURE_WEBAPP_SLOT_NAME: Production
-  AZURE_WEBAPP_PACKAGE_PATH: './published/**/*.zip'
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
-  AZURE_RESOURCE_GROUP: AccessibilityWebApp_group
-  WEBAPP_URL: 'https://accessibilitywebappgroepg.azurewebsites.net/'
-
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup MSBuild path
         uses: microsoft/setup-msbuild@v1.0.2
@@ -31,25 +24,13 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore
 
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
-      - name: Install Azure CLI
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | bash
-
-      - name: Update npm dependencies on Azure Web App
-        run: az webapp deployment script --name ${{ env.AZURE_WEBAPP_NAME }} --slot ${{ env.AZURE_WEBAPP_SLOT_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --command "npm install" --output none
-
-      - name: Build and publish
-        run: msbuild /nologo /verbosity:m /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:PublishProfile="Properties\PublishProfiles\AccessibilityWebAppGroepG - Web Deploy" /p:PackageLocation="\published\"
+      - name: Publish to folder
+        run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: AccessibilityWebAppGroepG
+          name: ASP-app
           path: '/published/**'
 
   deploy:
@@ -57,22 +38,19 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ env.WEBAPP_URL }}
-    
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: AccessibilityWebAppGroepG
-      
+          name: ASP-app
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
-
-      - name: Set environment variable for downstream jobs
-        run: echo "webapp-url=${{ steps.deploy-to-webapp.outputs.webapp-url }}" >> $GITHUB_ENV
+          app-name: 'AccessibilityWebAppGroepG'
+          slot-name: 'Production'
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5294976CEDCB4249B2B7DA35CDCEDD53 }}
