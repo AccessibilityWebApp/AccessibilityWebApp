@@ -38,7 +38,7 @@ jobs:
 
       - name: Install Azure CLI
         run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+          curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
       - name: Update npm dependencies on Azure Web App
         run: az webapp deployment script --name ${{ env.AZURE_WEBAPP_NAME }} --slot ${{ env.AZURE_WEBAPP_SLOT_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --command "npm install" --output none
