@@ -33,7 +33,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
                     <input className="surname" type="text" placeholder="Achternaam" />
                     <input className="zip" type="text" placeholder="Postcode" />
 
-                    
+
                     <select className="age" onChange={handleAgeChange}>
                         <option value="" disabled selected hidden>Leeftijdsgroep</option>
                         <option value="18-">18-</option>
