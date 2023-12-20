@@ -1,10 +1,12 @@
 import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import child_process from 'child_process';
+import react from 'react';
+import reactDom from 'react-dom';
+import reactRouterDom from 'react-router-dom';
 
 const baseFolder =
     process.env.APPDATA !== undefined && process.env.APPDATA !== ''
@@ -56,5 +58,10 @@ export default defineConfig({
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),
         }
-    }
-})
+    },
+    build: {
+        rollupOptions: {
+            external: [react, reactDom, reactRouterDom],
+        },
+    },
+});
