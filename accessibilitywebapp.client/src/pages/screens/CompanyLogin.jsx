@@ -58,7 +58,7 @@ export const CompanyLogin = ({ handleToAanmeld, handleToPortal, handleToCompanyP
 CompanyLogin.propTypes = {
     handleToAanmeld: PropTypes.func.isRequired,
     handleToPortal: PropTypes.func.isRequired,
-    handleToExpertPortal: PropTypes.func.isRequired,
+    handleToCompanyPortal: PropTypes.func.isRequired,
 };
 
 export default CompanyLogin;
