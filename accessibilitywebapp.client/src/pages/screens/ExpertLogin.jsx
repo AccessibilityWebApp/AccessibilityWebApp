@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "@/pages/pages_css/Login.css";
 
-export const Login = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) => {
+export const ExpertLogin = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) => {
     return (
         <div className="inlogpagina">
             <div className="div">
