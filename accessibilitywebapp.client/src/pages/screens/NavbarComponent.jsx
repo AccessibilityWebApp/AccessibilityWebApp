@@ -18,13 +18,22 @@ function NavbarComponent() {
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">Project Toegankelijkheid</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img
+                            alt=""
+                            src="src/pages/pages_css/logo_small.png"
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />{' '}
+                        Stichting Accesibility
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#link">Profiel</Nav.Link>
-                            <Nav.Link onClick={() => setShowLogoutModal(true)}>Uitloggen</Nav.Link>
+                            <Nav.Link onClick={() => setShowLogoutModal(true)}>Log uit</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

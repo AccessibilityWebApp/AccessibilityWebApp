@@ -1,0 +1,12 @@
+/* Form container styling */
+Form {
+    max-width:50%; /* Adjust the width as needed */
+    margin: auto;
+}
+
+/* Form group styling */
+FormGroup {
+    margin-top: 20%;
+    margin-bottom: 20%; /* Adjust margin as needed */
+}
+
