@@ -6,7 +6,6 @@ export const Ervaringsdeskundige = () => {
             <div className="div">
                 <div className="overlap">
                     <div className="rectangle" />
-                    <div className="ellipse" />
                     <div className="frame">
                         <div className="text-wrapper">Log uit</div>
                         <div className="text-wrapper-2">Welkom Jan</div>
@@ -14,8 +13,8 @@ export const Ervaringsdeskundige = () => {
                             <div className="text-wrapper-3">Home</div>
                         </div>
                         <div className="text-wrapper-4">Profiel</div>
-                        <img className="line" alt="Line" src="line-1.svg" />
-                        <img className="image" alt="Image" src="image-9.png" />
+                        <div className="line"></div>
+                        <div className="image-container"></div>
                     </div>
                 </div>
                 <div className="frame-2">

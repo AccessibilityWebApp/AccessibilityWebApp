@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "@/pages/pages_css/Login.css";
 
-export const Login = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) => {
+export const CompanyLogin = ({ handleToAanmeld, handleToPortal, handleToCompanyPortal }) => {
     return (
         <div className="inlogpagina">
             <div className="div">
@@ -37,7 +37,7 @@ export const Login = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) 
 
                         <div className="frame-6">
                             <div className="rectangle2" onClick={handleToPortal}>Terug</div>
-                            <div className="rectangle3" onClick={handleToExpertPortal}>Volgende</div>
+                            <div className="rectangle3" onClick={handleToCompanyPortal}>Volgende</div>
                         </div>
 
                         <div className="frame-7">
@@ -55,10 +55,10 @@ export const Login = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) 
     );
 };
 
-Login.propTypes = {
+CompanyLogin.propTypes = {
     handleToAanmeld: PropTypes.func.isRequired,
     handleToPortal: PropTypes.func.isRequired,
     handleToExpertPortal: PropTypes.func.isRequired,
 };
 
-export default Login;
+export default CompanyLogin;

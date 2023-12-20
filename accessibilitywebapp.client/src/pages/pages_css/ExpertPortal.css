@@ -31,16 +31,6 @@
         width: 1440px;
     }
 
-    .ervaringsdeskundige .ellipse {
-        background-color: #2b50ec;
-        border-radius: 280px/235px;
-        height: 470px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 560px;
-    }
-
     .ervaringsdeskundige .frame {
         height: 190px;
         left: 637px;
@@ -119,13 +109,16 @@
         position: absolute;
         top: 80px;
         width: 572px;
+        background-color: #000000;
     }
 
-    .ervaringsdeskundige .image {
+    .ervaringsdeskundige .image-container {
         background-image: url(./logo_small.png);
-        height: 63px;
-        left: 54px;
+        background-size: cover;
+        background-position: 50% 50%;
         object-fit: cover;
+        height: 62px;
+        left: 54px;
         position: absolute;
         top: 14px;
         width: 57px;
