@@ -12,38 +12,38 @@ const AssignmentCreator = () => {
             </header>
 
             <Form>
-                <FormGroup controlId="formAssignmentTitle">
+                <Form.Group className="mb-3" controlId="formAssignmentTitle">
                     <Form.Label>Titel</Form.Label>
                     <FormControl type="text" placeholder="Titel" />
-                </FormGroup>
+                </Form.Group>
 
-                <FormGroup controlId="formAssignmentDescription">
+                <Form.Group className="mb-3" controlId="formAssignmentDescription">
                     <Form.Label>Beschrijving</Form.Label>
                     <FormControl type="text" placeholder="Beschrijf je opdracht..." />
-                </FormGroup>
+                </Form.Group>
 
-                <FormGroup controlId="formAssignmentLocation">
+                <Form.Group className="mb-3" controlId="formAssignmentLocation">
                     <Form.Label>Locatie</Form.Label>
                     <FormControl type="text" placeholder="Locatie" />
-                </FormGroup>
+                </Form.Group>
 
-                <FormGroup controlId="formAssignmentReward">
+                <Form.Group className="mb-3" controlId="formAssignmentReward">
                     <Form.Label>Beloning</Form.Label>
                     <FormControl type="text" placeholder="Beloning" />
-                </FormGroup>
+                </Form.Group>
 
-                <FormGroup controlId="formAssignmentOptions">
-                    <Form.Label>Beperking(en)</Form.Label>
+                <Form.Group className="mb-3" controlId="formAssignmentOptions">
+                    <Form.Label>Beperking</Form.Label>
                     <Form.Control as="select">
-                        <option disabled>Select options</option>
+                        <option disabled>Kies een beperking</option>
                         <option value="option1">Blind</option>
                         <option value="option2">Doof</option>
-                        <option value="option3">Stom</option>
+                        <option value="option3">ADHD</option>
                     </Form.Control>
-                </FormGroup>
+                </Form.Group>
 
-                <Button variant="primary" type="submit">
-                    Submit
+                <Button variant="primary" type="submit" className="Knop">
+                    Bevestig
                 </Button>
             </Form>
         </div>
