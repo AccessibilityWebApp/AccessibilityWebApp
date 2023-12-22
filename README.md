@@ -1,5 +1,9 @@
 # Case Accessibility 2023-2024
 
+## Website link
+
+https://accessibilitywebappgroepg.azurewebsites.net
+
 ## Inleiding
 
 Dit project omvat de ontwikkeling van een complexe en veilige webapplicatie met een database, uitgevoerd in opdracht van Stichting Accessibility. De missie van de stichting is het bevorderen van een inclusieve samenleving waarin alle mensen, met of zonder beperking, gelijkwaardig kunnen participeren.
