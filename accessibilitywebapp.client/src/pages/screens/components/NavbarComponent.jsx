@@ -10,7 +10,6 @@ function NavbarComponent() {
     const [showLogoutModal, setShowLogoutModal] = useState(false);
 
     const handleLogout = () => {
-        // Methode die aangeroepen wordt als iemand wilt uitloggen.
         setShowLogoutModal(false);
     };
 
@@ -21,7 +20,7 @@ function NavbarComponent() {
                     <Navbar.Brand href="#home">
                         <img
                             alt=""
-                            src="src/pages/pages_css/logo_small.png"
+                            src="/icons/logo_small.png"
                             width="30"
                             height="30"
                             className="d-inline-block align-top"

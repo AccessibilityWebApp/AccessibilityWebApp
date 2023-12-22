@@ -8,7 +8,7 @@ export const CompanyLogin = ({ handleToAanmeld, handleToPortal, handleToCompanyP
                 <div className="frame" />
                 <div className="overlap-group">
                     <div className="frame-2" />
-                    <div className="frame-3" />
+                    <img className="frame-3" alt="logo" src="/icons/logo.png" />
                 </div>
 
                 <div className="LoginFrame">

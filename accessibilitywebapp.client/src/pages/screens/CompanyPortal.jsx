@@ -1,4 +1,3 @@
-import React from "react";
 import "@/pages/pages_css/CompanyPortal.css";
 
 export const BedrijfsPortaal = () => {
