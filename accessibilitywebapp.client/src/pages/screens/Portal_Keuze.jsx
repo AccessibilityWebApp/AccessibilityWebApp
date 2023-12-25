@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@/pages/pages_css/Portal_Keuze.css";
 
 const Portaalkeuze = ({ handlePortalButtonClick }) => {

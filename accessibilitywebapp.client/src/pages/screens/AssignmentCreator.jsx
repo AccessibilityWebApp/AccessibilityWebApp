@@ -1,6 +1,4 @@
-import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
-import "@/pages/pages_css/AssignmentCreator.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form, FormControl, Button } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
 
 const AssignmentCreator = () => {
