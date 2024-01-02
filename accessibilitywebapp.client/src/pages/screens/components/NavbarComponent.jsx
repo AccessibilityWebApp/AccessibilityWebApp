@@ -16,7 +16,7 @@ function NavbarComponent() {
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
-                <Container>
+                <Container fluid>
                     <Navbar.Brand href="#home">
                         <img
                             alt=""
