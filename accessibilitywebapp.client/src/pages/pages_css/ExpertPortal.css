@@ -1,9 +1,5 @@
 .ervaringsdeskundige {
     background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
 }
 
     .ervaringsdeskundige .div {
@@ -11,448 +7,496 @@
         height: 1017px;
         overflow: hidden;
         position: relative;
-        width: 1440px;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
-    .ervaringsdeskundige .overlap {
-        height: 471px;
-        left: -280px;
-        position: absolute;
-        top: -280px;
-        width: 1720px;
+
+
+@media (min-width: 768px) {
+    .ervaringsdeskundige {
+        flex-direction: row;
     }
 
-    .ervaringsdeskundige .rectangle {
-        background-color: #ffffffb5;
-        height: 92px;
-        left: 280px;
-        position: absolute;
-        top: 281px;
-        width: 1440px;
+        .ervaringsdeskundige .div {
+            width: 1440px;
+        }
+}
+
+
+.ervaringsdeskundige .overlap {
+    height: 471px;
+    left: -280px;
+    position: absolute;
+    top: -280px;
+    width: 1720px;
+}
+
+.ervaringsdeskundige .rectangle {
+    background-color: #ffffffb5;
+    height: 92px;
+    left: 280px;
+    position: absolute;
+    top: 281px;
+    width: 1440px;
+}
+
+.ervaringsdeskundige .frame {
+    height: 190px;
+    left: 637px;
+    position: absolute;
+    top: 0px;
+    width: 647px;
+}
+
+.ervaringsdeskundige .text-wrapper {
+    color: #0000ff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 449px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 137px;
+}
+
+.ervaringsdeskundige .text-wrapper-2 {
+    color: #000000;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 222px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 115px;
+    white-space: nowrap;
+    width: 282px;
+}
+
+.ervaringsdeskundige .overlap-group {
+    background-color: #0000ff;
+    border-radius: 5px;
+    height: 50px;
+    left: 122px;
+    position: absolute;
+    top: 21px;
+    width: 139px;
+}
+
+.ervaringsdeskundige .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 3px;
+    white-space: nowrap;
+}
+
+.ervaringsdeskundige .text-wrapper-4 {
+    color: #0000ff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 303px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 120px;
+}
+
+.ervaringsdeskundige .line {
+    height: 1px;
+    left: 53px;
+    object-fit: cover;
+    position: absolute;
+    top: 80px;
+    width: 572px;
+    background-color: #000000;
+}
+
+.ervaringsdeskundige .image-container {
+    background-image: url(./icons/logo_small.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    object-fit: cover;
+    height: 62px;
+    left: 54px;
+    position: absolute;
+    top: 14px;
+    width: 57px;
+}
+
+.ervaringsdeskundige .frame-2 {
+    height: 749px;
+    left: 45px;
+    position: absolute;
+    top: 206px;
+    width: 615px
+}
+
+.ervaringsdeskundige .text-wrapper-5 {
+    color: #000000;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 51px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    width: 421px;
+}
+
+.ervaringsdeskundige .overlap-group-2 {
+    height: 499px;
+    left: 44px;
+    position: absolute;
+    top: 85px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 285px;
+}
+
+.ervaringsdeskundige .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 39px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 165px;
+    width: 358px;
+}
+
+.ervaringsdeskundige .rectangle-2 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-8 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 351px;
+}
+
+.ervaringsdeskundige .rectangle-3 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 134px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-9 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 156px;
+    width: 351px;
+}
+
+.ervaringsdeskundige .text-wrapper-10 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 39px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 294px;
+    width: 358px;
+}
+
+.ervaringsdeskundige .rectangle-4 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 263px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .rectangle-5 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 392px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-11 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 29px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 285px;
+    width: 411px;
+}
+
+.ervaringsdeskundige .rectangle-wrapper {
+    background-color: #3a3a3a;
+    border-radius: 50px;
+    height: 628px;
+    left: 578px;
+    position: absolute;
+    top: 85px;
+    width: 11px;
+}
+
+.ervaringsdeskundige .rectangle-6 {
+    background-color: #92abdb;
+    border-radius: 50px;
+    height: 143px;
+}
+
+.ervaringsdeskundige .rectangle-7 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 44px;
+    position: absolute;
+    top: 606px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .frame-3 {
+    height: 758px;
+    left: 719px;
+    position: absolute;
+    top: 197px;
+    width: 615px;
+}
+
+.ervaringsdeskundige .overlap-2 {
+    height: 499px;
+    left: 0px;
+    position: absolute;
+    top: 84px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-12 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 335px;
+}
+
+.ervaringsdeskundige .text-wrapper-13 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 165px;
+    width: 420px;
+}
+
+.ervaringsdeskundige .rectangle-8 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-14 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 22px;
+    width: 412px;
+}
+
+.ervaringsdeskundige .rectangle-9 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 134px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-15 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 156px;
+    width: 412px;
+}
+
+.ervaringsdeskundige .text-wrapper-16 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 294px;
+    width: 420px;
+}
+
+.ervaringsdeskundige .rectangle-10 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 263px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .rectangle-11 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 392px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-17 {
+    color: #ffffff;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 285px;
+    width: 483px;
+}
+
+.ervaringsdeskundige .div-wrapper {
+    background-color: #3a3a3a;
+    border-radius: 50px;
+    height: 628px;
+    left: 528px;
+    position: absolute;
+    top: 84px;
+    width: 11px;
+}
+
+.ervaringsdeskundige .rectangle-12 {
+    background-color: #2b50ec;
+    border-radius: 15px;
+    height: 107px;
+    left: 0px;
+    position: absolute;
+    top: 605px;
+    width: 521px;
+}
+
+.ervaringsdeskundige .text-wrapper-18 {
+    color: #000000;
+    font-family: "ABeeZee-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 0px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 624px;
+}
+
+@media (max-width: 768px) {
+    .ervaringsdeskundige .rowstyle {
+        display: flex;
+        flex-direction: column;
     }
 
-    .ervaringsdeskundige .frame {
-        height: 190px;
-        left: 637px;
-        position: absolute;
-        top: 281px;
-        width: 647px;
-    }
-
-    .ervaringsdeskundige .text-wrapper {
-        color: #0000ff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 36px;
-        font-weight: 400;
-        left: 449px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 137px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-2 {
-        color: #000000;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 222px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 115px;
-        white-space: nowrap;
-        width: 282px;
-    }
-
-    .ervaringsdeskundige .overlap-group {
-        background-color: #0000ff;
-        border-radius: 5px;
-        height: 50px;
-        left: 122px;
-        position: absolute;
-        top: 21px;
-        width: 139px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-3 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 36px;
-        font-weight: 400;
-        left: 20px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 3px;
-        white-space: nowrap;
-    }
-
-    .ervaringsdeskundige .text-wrapper-4 {
-        color: #0000ff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 36px;
-        font-weight: 400;
-        left: 303px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 120px;
-    }
-
-    .ervaringsdeskundige .line {
-        height: 1px;
-        left: 53px;
-        object-fit: cover;
-        position: absolute;
-        top: 80px;
-        width: 572px;
-        background-color: #000000;
-    }
-
-    .ervaringsdeskundige .image-container {
-        background-image: url(./logo_small.png);
-        background-size: cover;
-        background-position: 50% 50%;
-        object-fit: cover;
-        height: 62px;
-        left: 54px;
-        position: absolute;
-        top: 14px;
-        width: 57px;
-    }
-
+    .ervaringsdeskundige .overlap,
+    .ervaringsdeskundige .rectangle,
+    .ervaringsdeskundige .frame,
     .ervaringsdeskundige .frame-2 {
-        height: 730px;
-        left: 45px;
-        position: absolute;
-        top: 236px;
-        width: 1372px;
+        width: 160%;
+        height: 110%;
+        left: 0;
     }
 
-    .ervaringsdeskundige .text-wrapper-5 {
-        color: #000000;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
+    .ervaringsdeskundige .frame-3 {
+        display: flex;
+        width: 160%;
         left: 51px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 5px;
-        width: 421px;
+        height: 110%;
+        top: 1000px;
+        order: 1;
     }
-
-    .ervaringsdeskundige .overlap-group-2 {
-        height: 499px;
-        left: 44px;
-        position: absolute;
-        top: 85px;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-6 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 29px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 285px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-7 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 39px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 165px;
-        width: 358px;
-    }
-
-    .ervaringsdeskundige .rectangle-2 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 112px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-8 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 29px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 351px;
-    }
-
-    .ervaringsdeskundige .rectangle-3 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 134px;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-9 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 29px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 156px;
-        width: 351px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-10 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 39px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 294px;
-        width: 358px;
-    }
-
-    .ervaringsdeskundige .rectangle-4 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 263px;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .rectangle-5 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 392px;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-11 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 29px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 285px;
-        width: 411px;
-    }
-
-    .ervaringsdeskundige .rectangle-wrapper {
-        background-color: #3a3a3a;
-        border-radius: 50px;
-        height: 628px;
-        left: 578px;
-        position: absolute;
-        top: 85px;
-        width: 11px;
-    }
-
-    .ervaringsdeskundige .rectangle-6 {
-        background-color: #92abdb;
-        border-radius: 50px;
-        height: 143px;
-    }
-
-    .ervaringsdeskundige .rectangle-7 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 44px;
-        position: absolute;
-        top: 606px;
-        width: 521px;
-    }
-
-    .ervaringsdeskundige .overlap-2 {
-        height: 499px;
-        left: 719px;
-        position: absolute;
-        top: 84px;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-12 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 34px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 335px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-13 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 46px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 165px;
-        width: 420px;
-    }
-
-    .ervaringsdeskundige .rectangle-8 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 112px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-14 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 34px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 22px;
-        width: 412px;
-    }
-
-    .ervaringsdeskundige .rectangle-9 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 134px;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-15 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 34px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 156px;
-        width: 412px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-16 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 46px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 294px;
-        width: 420px;
-    }
-
-    .ervaringsdeskundige .rectangle-10 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 263px;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .rectangle-11 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 0;
-        position: absolute;
-        top: 392px;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-17 {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 34px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 285px;
-        width: 483px;
-    }
-
-    .ervaringsdeskundige .div-wrapper {
-        background-color: #3a3a3a;
-        border-radius: 50px;
-        height: 628px;
-        left: 1343px;
-        position: absolute;
-        top: 84px;
-        width: 11px;
-    }
-
-    .ervaringsdeskundige .rectangle-12 {
-        background-color: #2b50ec;
-        border-radius: 15px;
-        height: 107px;
-        left: 719px;
-        position: absolute;
-        top: 605px;
-        width: 612px;
-    }
-
-    .ervaringsdeskundige .text-wrapper-18 {
-        color: #000000;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 48px;
-        font-weight: 400;
-        left: 719px;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 15px;
-        white-space: nowrap;
-        width: 624px;
-    }
+}
