@@ -1,10 +1,18 @@
 import "@/pages/pages_css/CompanyPortal.css";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export const BedrijfsPortaal = () => {
     return (
+        <Container className="BedrijfsPortaal">
         <div className="bedrijfs-portaal">
             <div className="div">
-                <img className="rectangle" alt="Rectangle" src="rectangle-50.svg" />
+                    <img className="rectangle" alt="Rectangle" src="rectangle-50.svg" />
+                </div>
+                    </div>
+            <Row classname="rowstyle">
+                <Col xs={12} md={7} lg={4}>
                 <div className="frame">
                     <div className="overlap">
                         <img className="vector" alt="Vector" src="vector-20.svg" />
@@ -27,7 +35,8 @@ export const BedrijfsPortaal = () => {
                         <div className="text-wrapper-4">Onderzoek app ING</div>
                         <img className="vector-5" alt="Vector" src="vector-21.svg" />
                     </div>
-                </div>
+                    </div>
+                </Colxs>
                 <div className="frame-2">
                     <div className="text-wrapper-5">Log uit</div>
                     <div className="text-wrapper-6">Profiel</div>
@@ -38,8 +47,8 @@ export const BedrijfsPortaal = () => {
                     <div className="line"></div>
                     <img className="image" alt="Image" src="image-9.png" />
                 </div>
-            </div>
-        </div>
+                </Row>
+            </Container>
     );
 };
 export default BedrijfsPortaal;
