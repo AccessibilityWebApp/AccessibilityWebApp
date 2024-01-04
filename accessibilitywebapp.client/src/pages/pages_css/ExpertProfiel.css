@@ -46,11 +46,15 @@
     }
 
     .profiel .vector {
+        background-image: url(./icons/potlood2.png);
+        background-size: cover;
+        background-position: 50% 50%;
         height: 25px;
         left: 254px;
         position: absolute;
         top: 16px;
         width: 14px;
+        z-index: 100;
     }
 
     .profiel .overlap-group {
@@ -63,13 +67,7 @@
         width: 1440px;
     }
 
-    .profiel .img {
-        height: 92px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 1440px;
-    }
+    
 
     .profiel .overlap-2 {
         height: 557px;
@@ -134,20 +132,6 @@
         top: 9px;
         width: 107px;
     }
-
-    .profiel .voorletter-m {
-        color: #ffffff;
-        font-family: "ABeeZee-Regular", Helvetica;
-        font-size: 30px;
-        font-weight: 400;
-        left: 0;
-        letter-spacing: 0;
-        line-height: normal;
-        position: absolute;
-        top: 32px;
-        width: 487px;
-    }
-
     .profiel .group-2 {
         height: 382px;
         left: 44px;
@@ -415,11 +399,15 @@
     }
 
     .profiel .vector-2 {
+        background-image: url(./icons/potlood2.png);
+        background-size: cover;
+        background-position: 50% 50%;
         height: 25px;
         left: 326px;
         position: absolute;
         top: 20px;
         width: 14px;
+        z-index: 100;
     }
 
     .profiel .overlap-12 {
@@ -431,14 +419,21 @@
     }
 
     .profiel .vector-3 {
+        background-image: url(./icons/potlood.png);
+        background-size: cover;
+        background-position: 50% 50%;
         height: 24px;
         left: 130px;
         position: absolute;
         top: 132px;
         width: 19px;
+        z-index: 100;
     }
 
-    .profiel .image {
+    .profiel .logo {
+        background-image: url(./icons/kou_logo.png);
+        background-size: cover;
+        background-position: 50% 50%;
         height: 156px;
         left: 0;
         object-fit: cover;
@@ -446,7 +441,7 @@
         top: 0;
         width: 158px;
     }
-
+    
     .profiel .overlap-13 {
         height: 45px;
         left: 800px;
@@ -536,6 +531,7 @@
     }
 
     .profiel .line {
+        background-color: #000000;
         height: 1px;
         left: 410px;
         object-fit: cover;
@@ -545,6 +541,9 @@
     }
 
     .profiel .image-2 {
+        background-image: url(./icons/logo_small.png);
+        background-size: cover;
+        background-position: 50% 50%;
         height: 68px;
         left: 442px;
         object-fit: cover;
@@ -564,9 +563,11 @@
     }
 
     .profiel .ellipse-2 {
-        height: 235px;
-        left: 1131px;
+        background-color: #21cea1;
+        border-radius: 280px/235px;
+        height: 240px;
+        left: 1160px;
         position: absolute;
-        top: 789px;
-        width: 309px;
+        top: 784px;
+        width: 280px;
     }
