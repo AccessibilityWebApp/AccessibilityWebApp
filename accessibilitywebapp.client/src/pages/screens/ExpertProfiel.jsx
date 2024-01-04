@@ -1,38 +1,24 @@
-import React from "react";
-import "./style.css";
+import "@/pages/pages_css/ExpertProfiel.css";
+import PropTypes from "prop-types";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
-export const Profiel = () => {
+export const ExpertProfiel = ({handleToExpertPortal}) => {
     return (
-        <div className="profiel">
+        <Container className="profiel">
             <div className="div">
+
                 <div className="overlap">
                     <div className="rectangle" />
                     <div className="text-wrapper">IsoCan070</div>
-                    <img className="vector" alt="Vector" src="vector-15.svg" />
+                    <div className="vector" />
                 </div>
-                <div className="overlap-group">
-                    <img className="img" alt="Rectangle" src="rectangle-53.svg" />
-                </div>
+
+                
+
                 <div className="overlap-2">
-                    <div className="rectangle-2" />
-                    <div className="text-wrapper-2">Verwijder account</div>
-                    <div className="group">
-                        <div className="div-wrapper">
-                            <div className="text-wrapper-3">Opslaan</div>
-                        </div>
-                    </div>
-                    <p className="voorletter-m">
-                        Voorletter: M<br />
-                        Achternaam: Gunus
-                        <br />
-                        leeftijdsgroep: 18-35
-                        <br />
-                        Postcode: 4201GS
-                        <br />
-                        E-mail: BabaAhmet@gmail.com
-                        <br />
-                        Telefoonnummer: 06 12345678
-                    </p>
+                    
+                    
                     <div className="group-2">
                         <div className="div-2">
                             <div className="text-wrapper-4">M.</div>
@@ -66,34 +52,54 @@ export const Profiel = () => {
                             <div className="text-wrapper-12">Online</div>
                         </div>
                     </div>
+
                     <div className="text-wrapper-13">Wachtwoord wijzigen</div>
+
+                    <div className="rectangle-2" />
+                    <div className="text-wrapper-2">Verwijder account</div>
+
+                    <div className="group">
+                        <div className="div-wrapper">
+                            <div className="text-wrapper-3" onClick={handleToExpertPortal}>Opslaan</div>
+                        </div>
+                    </div> 
+
                 </div>
+
                 <div className="overlap-11">
                     <div className="text-wrapper-14">Mijn gegevens</div>
-                    <img className="vector-2" alt="Vector" src="vector-14.svg" />
+                    <div className="vector-2" />
                 </div>
+
                 <div className="overlap-12">
-                    <img className="vector-3" alt="Vector" src="vector-16.svg" />
-                    <img className="image" alt="Image" src="image-8.png" />
+                    <div className="vector-3" />
+                    <div className="logo" />
                 </div>
+
                 <div className="overlap-13">
-                    <div className="text-wrapper-15">Log uit</div>
-                    <div className="text-wrapper-15">Log uit</div>
+                    <div className="text-wrapper-15">Log uit</div>                    
                 </div>
+
                 <div className="overlap-14">
-                    <div className="text-wrapper-16">Home</div>
-                    <div className="text-wrapper-16">Home</div>
+                    <div className="text-wrapper-16">Home</div>                   
                 </div>
-                <div className="overlap-15">
-                    <div className="text-wrapper-17">Profiel</div>
+
+                <div className="overlap-15">                    
                     <div className="rectangle-3" />
                     <div className="text-wrapper-18">Profiel</div>
                 </div>
-                <img className="line" alt="Line" src="line-1.svg" />
-                <img className="image-2" alt="Image" src="image-9.png" />
+
+                <div className="line" />
+                <div className="image-2" />
                 <div className="ellipse" />
-                <img className="ellipse-2" alt="Ellipse" src="ellipse-15.svg" />
+                <div className="ellipse-2" />
             </div>
-        </div>
+        </Container>
     );
 };
+
+ExpertProfiel.propTypes = {
+    handleToExpertPortal: PropTypes.func.isRequired,
+};
+
+export default ExpertProfiel;
