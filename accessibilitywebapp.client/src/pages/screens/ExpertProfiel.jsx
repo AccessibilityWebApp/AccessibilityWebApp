@@ -1,85 +1,93 @@
-import "@/pages/pages_css/ExpertProfiel.css";
 import PropTypes from "prop-types";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Image, Form, FormControl, Button } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
 
-export const ExpertProfiel = ({handleToExpertPortal}) => {
+export const ExpertProfiel = ({ handleToExpertPortal }) => {
     return (
-        <Container className="profiel">
-            <div className="div">
-                <NavbarComponent />
-                <div className="overlap">
-                    <div className="rectangle" />
-                    <div className="text-wrapper">IsoCan070</div>
-                    <div className="vector" />
-                </div>
+        <Container fluid className="margin">
+            <NavbarComponent />
 
-                
+            <Image src="./icons/kou_logo.png" rounded fluid/>
 
-                <div className="overlap-2">
-                    
-                    
-                    <div className="group-2">
-                        <div className="div-2">
-                            <div className="text-wrapper-4">M.</div>
-                        </div>
-                        <div className="overlap-3">
-                            <div className="text-wrapper-5">4206GG</div>
-                        </div>
-                        <div className="overlap-4">
-                            <div className="text-wrapper-6">MGunus@gmail.com</div>
-                        </div>
-                        <div className="overlap-5">
-                            <div className="div-2" />
-                            <div className="text-wrapper-7">18-35</div>
-                        </div>
-                        <div className="overlap-6">
-                            <div className="text-wrapper-8">Gunus</div>
-                        </div>
-                        <div className="overlap-7">
-                            <div className="div-2" />
-                            <div className="text-wrapper-9">06 12345678</div>
-                        </div>
-                        <div className="overlap-8">
-                            <div className="div-2" />
-                            <div className="text-wrapper-10">Doof</div>
-                        </div>
-                        <div className="overlap-9">
-                            <div className="div-2" />
-                            <div className="text-wrapper-11">Telefonisch</div>
-                        </div>
-                        <div className="overlap-10">
-                            <div className="text-wrapper-12">Online</div>
-                        </div>
-                    </div>
+            <Form className="mt-5">
+                <Form.Group controlId="formProfileName">
+                    <Form.Label>Voorletters</Form.Label>
+                    <FormControl
+                        type="text"
+                        placeholder="M."
+                    />
+                </Form.Group>
 
-                    <div className="text-wrapper-13">Wachtwoord wijzigen</div>
+                <Form.Group controlId="formProfileSurname">
+                    <Form.Label>Achternaam</Form.Label>
+                    <FormControl
+                        type="text"
+                        placeholder="Gunus"
+                    />
+                </Form.Group>
 
-                    <div className="rectangle-2" />
-                    <div className="text-wrapper-2">Verwijder account</div>
+                <Form.Group controlId="formProfilePostalcode">
+                    <Form.Label>Postcode</Form.Label>
+                    <FormControl
+                        type="text"
+                        placeholder="4206GG"
+                    />
+                </Form.Group>
 
-                    <div className="group">
-                        <div className="div-wrapper">
-                            <div className="text-wrapper-3" onClick={handleToExpertPortal}>Opslaan</div>
-                        </div>
-                    </div> 
+                <Form.Group className="mb-3" controlId="formProfileAge">
+                    <Form.Label>Leeftijdscategorie</Form.Label>
+                    <FormControl as="select" required>
+                        <option value=""></option>
+                        <option value="option1">Onder de 18</option>
+                        <option value="option2">18-30</option>
+                        <option value="option3">31-45</option>
+                        <option value="option4">45+</option>
+                    </FormControl>
+                </Form.Group>
 
-                </div>
+                <Form.Group className="mb-3" controlId="formProfileEmail">
+                    <Form.Label>E-Mail adres</Form.Label>
+                    <FormControl
+                        type="email"
+                        placeholder="MGunus@gmail.com"
+                    />
+                </Form.Group>
 
-                <div className="overlap-11">
-                    <div className="text-wrapper-14">Mijn gegevens</div>
-                    <div className="vector-2" />
-                </div>
+                <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
+                    <Form.Label>Telefoonnummer</Form.Label>
+                    <FormControl
+                        type="text"
+                        placeholder="06 12345678"
+                    />
+                </Form.Group>
 
-                <div className="overlap-12">
-                    <div className="vector-3" />
-                    <div className="logo" />
-                </div>
+                <Form.Group className="mb-3" controlId="formProfileContactMethod">
+                    <Form.Label>Contactmethode</Form.Label>
+                    <FormControl as="select" required>
+                        <option value=""></option>
+                        <option value="option1">Telefonisch</option>
+                        <option value="option2">E-Mail</option>
+                    </FormControl>
+                </Form.Group>
 
-                <div className="line" />
-                <div className="ellipse" />
-                <div className="ellipse-2" />
-            </div>
+                <Form.Group className="mb-3" controlId="formProfileOptions">
+                    <Form.Label>Beperking</Form.Label>
+                    <FormControl as="select" required>
+                        <option value="">Kies een beperking</option>
+                        <option value="option1">Blind</option>
+                        <option value="option2">Doof</option>
+                        <option value="option3">ADHD</option>
+                    </FormControl>
+                </Form.Group>
+
+                <Button variant="success" type="submit" className="Knop">
+                    Bevestig
+                </Button>
+
+                <Button variant="danger" type="submit" className="Knop">
+                    Verwijder Account
+                </Button>
+            </Form>
         </Container>
     );
 };
