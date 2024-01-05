@@ -2,36 +2,17 @@ import React from 'react';
 import "@/pages/pages_css/ExpertPortal.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-
+import NavbarComponent from "./components/NavbarComponent";
 
 export const Ervaringsdeskundige = () => {
     return (
         <Container className="ervaringsdeskundige">
-             <div className="overlap">
-                        <div className="ervaringsdeskundige">
-                            <div className="div">
-                                <div className="overlap">
-                                <div className="rectangle" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            
-                            
-                                    <div className="frame">
-                                        <div className="text-wrapper">Log uit</div>
-                                        <div className="text-wrapper-2">Welkom Jan</div>
-                                        <div className="overlap-group">
-                                            <div className="text-wrapper-3">Home</div>
-                                        </div>
-                                        <div className="text-wrapper-4">Profiel</div>
-                                        <div className="line"></div>
-                                        <div className="image-container"></div>
-            </div>
+
+            <NavbarComponent />
+
             <Row className="rowstyle">
                 <Col xs={12} md={7} lg={4}>
-                                <div className="frame-2">
+                    <div className="frame-2">
                         <div className="text-wrapper-5">Uw onderzoeken:</div>
                         <div className="overlap-group-2">
                             <div className="text-wrapper-6">Onderzoek KPN</div>
@@ -51,30 +32,30 @@ export const Ervaringsdeskundige = () => {
                         <div className="rectangle-7" />
                     </div>
                 </Col>
-                    <Col xs={12} md={6} lg={4}>
-                        <div className="parent-of-frame-3">
-                    <div className="frame-3">
-                        <div className="overlap-2">
-                            <div className="text-wrapper-12">Onderzoek KPN</div>
-                            <div className="text-wrapper-13">Onderzoek ING</div>
-                            <div className="rectangle-8" />
-                            <div className="text-wrapper-14">Onderzoek KPN</div>
-                            <div className="rectangle-9" />
-                            <div className="text-wrapper-15">Onderzoek ING</div>
-                            <div className="text-wrapper-16">Onderzoek ING</div>
-                            <div className="rectangle-10" />
-                            <div className="rectangle-11" />
-                            <div className="text-wrapper-17">Onderzoek Hema</div>
-                        </div>
-                        <div className="div-wrapper">
-                            <div className="rectangle-6" />
-                        </div>
-                        <div className="rectangle-12" />
-                        <div className="text-wrapper-18">Uw voltooide onderzoeken:</div>
+
+                <Col xs={12} md={6} lg={4}>
+                    <div className="parent-of-frame-3">
+                        <div className="frame-3">
+                            <div className="overlap-2">
+                                <div className="text-wrapper-12">Onderzoek KPN</div>
+                                <div className="text-wrapper-13">Onderzoek ING</div>
+                                <div className="rectangle-8" />
+                                <div className="text-wrapper-14">Onderzoek KPN</div>
+                                <div className="rectangle-9" />
+                                <div className="text-wrapper-15">Onderzoek ING</div>
+                                <div className="text-wrapper-16">Onderzoek ING</div>
+                                <div className="rectangle-10" />
+                                <div className="rectangle-11" />
+                                <div className="text-wrapper-17">Onderzoek Hema</div>
                             </div>
+                            <div className="div-wrapper">
+                                <div className="rectangle-6" />
+                            </div>
+                            <div className="rectangle-12" />
+                            <div className="text-wrapper-18">Uw voltooide onderzoeken:</div>
+                        </div>
                     </div>
-                
-                    </Col>
+                </Col>
             </Row>
         </Container>
     );

@@ -540,18 +540,6 @@
         width: 572px;
     }
 
-    .profiel .image-2 {
-        background-image: url(./icons/logo_small.png);
-        background-size: cover;
-        background-position: 50% 50%;
-        height: 68px;
-        left: 442px;
-        object-fit: cover;
-        position: absolute;
-        top: 10px;
-        width: 61px;
-    }
-
     .profiel .ellipse {
         background-color: #2b50ec;
         border-radius: 280px/235px;

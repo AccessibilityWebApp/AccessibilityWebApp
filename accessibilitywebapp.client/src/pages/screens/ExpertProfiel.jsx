@@ -1,13 +1,13 @@
 import "@/pages/pages_css/ExpertProfiel.css";
 import PropTypes from "prop-types";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import NavbarComponent from "./components/NavbarComponent";
 
 export const ExpertProfiel = ({handleToExpertPortal}) => {
     return (
         <Container className="profiel">
             <div className="div">
-
+                <NavbarComponent />
                 <div className="overlap">
                     <div className="rectangle" />
                     <div className="text-wrapper">IsoCan070</div>
@@ -76,21 +76,7 @@ export const ExpertProfiel = ({handleToExpertPortal}) => {
                     <div className="logo" />
                 </div>
 
-                <div className="overlap-13">
-                    <div className="text-wrapper-15">Log uit</div>                    
-                </div>
-
-                <div className="overlap-14">
-                    <div className="text-wrapper-16">Home</div>                   
-                </div>
-
-                <div className="overlap-15">                    
-                    <div className="rectangle-3" />
-                    <div className="text-wrapper-18">Profiel</div>
-                </div>
-
                 <div className="line" />
-                <div className="image-2" />
                 <div className="ellipse" />
                 <div className="ellipse-2" />
             </div>
