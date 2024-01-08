@@ -1,57 +1,44 @@
-import PropTypes from "prop-types";
-import "@/pages/pages_css/Login.css";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import PropTypes from 'prop-types';
+
 
 export const ExpertLogin = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) => {
     return (
-        <div className="inlogpagina">
-            <div className="div">
-                <div className="frame" />
-                <div className="overlap-group">
-                    <div className="frame-2" />
-                    <img className="frame-3" alt="logo" src="/icons/logo.png" />
-                </div>
+        <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Gebruiker</Form.Label>
+                <Form.Control type="email"/>
+                <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
 
-                <div className="LoginFrame">
-                    <div className="frame-4">
-                        <div className="text-wrapper">Log in</div>
-                        <div className="overlap-wrapper">
-                            <input
-                                type="text"
-                                className="entry-box"
-                                placeholder="Gebruiker"
-                            />
-                        </div>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Wachtwoord</Form.Label>
+                <Form.Control type="password" placeholder="" />
+            </Form.Group>
 
-                        <div className="group">
-                            <input
-                                type="password"
-                                className="entry-box"
-                                placeholder="Wachtwoord"
-                            />
-                        </div>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Remember me" />
+            </Form.Group>
 
-                        <div className="frame-5">
-                            <input type="checkbox" className="checkbox" />
-                            <div className="text-wrapper-2">Onthoud mij</div>
-                        </div>
-
-                        <div className="frame-6">
-                            <div className="rectangle2" onClick={handleToPortal}>Terug</div>
-                            <div className="rectangle3" onClick={handleToExpertPortal}>Volgende</div>
-                        </div>
-
-                        <div className="frame-7">
-                            <div className="text-wrapper-5">Wachtwoord vergeten?</div>
-                        </div>
-
-                        <div className="frame-8">
-                            <div className="text-wrapper-4">Heb je nog geen account?</div>
-                            <div className="aanmelden" onClick={handleToAanmeld}>Meld je hier aan</div>
-                        </div>
-                    </div>
-                </div>
+            <div className="d-grid gap-2">
+                <Button variant="secondary" onClick={handleToPortal}>
+                    Back
+                </Button>
+                <Button variant="primary" onClick={handleToExpertPortal}>
+                    Next
+                </Button>
             </div>
-        </div>
+
+            <div className="mt-3">
+                <Button variant="link" onClick={handleToAanmeld}>
+                    Forgot password?
+                </Button>
+            </div>
+        </Form>
     );
 };
 
