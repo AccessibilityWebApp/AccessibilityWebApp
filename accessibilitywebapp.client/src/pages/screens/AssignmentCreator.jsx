@@ -17,6 +17,7 @@ const AssignmentCreator = () => {
     };
 
     return (
+        <div>
         <Container fluid className="margin" >
             <NavbarComponent/>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -64,7 +65,8 @@ const AssignmentCreator = () => {
                     Bevestig
                 </Button>
             </Form>
-        </Container>
+            </Container>
+        </div>
     );
 };
 

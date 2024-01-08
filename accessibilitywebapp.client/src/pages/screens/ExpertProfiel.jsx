@@ -4,10 +4,12 @@ import NavbarComponent from "./components/NavbarComponent";
 
 export const ExpertProfiel = ({ handleToExpertPortal }) => {
     return (
-        <Container fluid className="margin">
+        <Container fluid className="margin mb-5">
             <NavbarComponent />
 
-            <Image src="./icons/kou_logo.png" rounded fluid/>
+            <div className="text-center">
+                <Image src="./icons/kou_logo.png" rounded />
+            </div>
 
             <Form className="mt-5">
                 <Form.Group controlId="formProfileName">
@@ -80,7 +82,8 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
                     </FormControl>
                 </Form.Group>
 
-                <Button variant="success" type="submit" className="Knop">
+
+                <Button variant="success" type="submit" className="Knop me-3">
                     Bevestig
                 </Button>
 
