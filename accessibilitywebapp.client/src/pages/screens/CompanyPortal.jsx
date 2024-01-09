@@ -38,18 +38,6 @@ export const BedrijfsPortaal = () => {
                     </div>
                     </div>
                         </Col>
-                        <Col xs={12} md={7} lg={4}>
-                <div className="frame-2">
-                    <div className="text-wrapper-5">Log uit</div>
-                    <div className="text-wrapper-6">Profiel</div>
-                    <div className="overlap-4">
-                        <div className="rectangle-2" />
-                        <div className="text-wrapper-7">Home</div>
-                    </div>
-                    <div className="line"></div>
-                    <img className="image" alt="Image" src="image-9.png" />
-                        </div>
-                    </Col>
                     </Row>
                 </div>
                     </div>
