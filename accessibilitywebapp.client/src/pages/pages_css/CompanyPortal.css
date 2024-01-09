@@ -1,9 +1,6 @@
 .bedrijfs-portaal {
     background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    
 }
 
     .bedrijfs-portaal .div {
@@ -13,6 +10,15 @@
         position: relative;
         width: 1440px;
     }
+@media (min-width: 768px) {
+    .bedrijfs-portaal {
+        flex-direction: row;
+    }
+
+        .bedrijfs-portaal .div {
+            width: 1440px;
+        }
+}
 
     .bedrijfs-portaal .rectangle {
         height: 92px;
@@ -34,19 +40,21 @@
         background-color: #2b50ec;
         border-radius: 5px;
         height: 141px;
-        left: 39px;
+        left: 0px;
         position: absolute;
         top: 492px;
-        width: 1017px;
+        width: 800px;
     }
 
-    .bedrijfs-portaal .vector {
-        height: 53px;
-        left: 962px;
-        position: absolute;
-        top: 6px;
-        width: 37px;
-    }
+.bedrijfs-portaal .vector {
+    background-image: url(./icons/wit_potlood.png);
+    background-repeat: no-repeat;
+    height: 45px;
+    left: 745px;
+    position: absolute;
+    top: 6px;
+    width: 35px;
+}
 
     .bedrijfs-portaal .text-wrapper {
         color: #ffffff;
@@ -73,6 +81,7 @@
     }
 
     .bedrijfs-portaal .img {
+        background-color: #ffffff;
         height: 10px;
         left: 6px;
         position: absolute;
@@ -80,13 +89,14 @@
         width: 47px;
     }
 
-    .bedrijfs-portaal .vector-2 {
-        height: 46px;
-        left: 25px;
-        position: absolute;
-        top: 4px;
-        width: 10px;
-    }
+.bedrijfs-portaal .vector-2 {
+    background-color: #ffffff;
+    height: 46px;
+    left: 25px;
+    position: absolute;
+    top: 6px;
+    width: 10px;
+}
 
     .bedrijfs-portaal .text-wrapper-2 {
         color: #000000;
@@ -106,10 +116,10 @@
         background-color: #2b50ec;
         border-radius: 5px;
         height: 153px;
-        left: 39px;
+        left: 0px;
         position: absolute;
         top: 139px;
-        width: 1017px;
+        width: 800px;
     }
 
     .bedrijfs-portaal .text-wrapper-3 {
@@ -125,31 +135,35 @@
         width: 556px;
     }
 
-    .bedrijfs-portaal .vector-3 {
-        height: 53px;
-        left: 962px;
-        position: absolute;
-        top: 12px;
-        width: 37px;
-    }
+.bedrijfs-portaal .vector-3 {
+    background-image: url(./icons/wit_potlood.png);
+    background-repeat: no-repeat;
+    height: 45px;
+    left: 745px;
+    position: absolute;
+    top: 6px;
+    width: 35px;
+}
 
     .bedrijfs-portaal .overlap-2 {
         background-color: #2b50ec;
         border-radius: 5px;
         height: 141px;
-        left: 39px;
+        left: 0px;
         position: absolute;
         top: 320px;
-        width: 1017px;
+        width: 800px;
     }
 
-    .bedrijfs-portaal .vector-4 {
-        height: 53px;
-        left: 962px;
-        position: absolute;
-        top: 19px;
-        width: 37px;
-    }
+.bedrijfs-portaal .vector-4 {
+    background-image: url(./icons/wit_potlood.png);
+    background-repeat: no-repeat;
+    height: 45px;
+    left: 745px;
+    position: absolute;
+    top: 6px;
+    width: 35px;
+}
 
     .bedrijfs-portaal .text-wrapper-4 {
         color: #ffffff;
@@ -168,19 +182,21 @@
         background-color: #2b50ec;
         border-radius: 5px;
         height: 141px;
-        left: 39px;
+        left: 0px;
         position: absolute;
         top: 659px;
-        width: 1017px;
+        width: 800px;
     }
 
-    .bedrijfs-portaal .vector-5 {
-        height: 53px;
-        left: 962px;
-        position: absolute;
-        top: 16px;
-        width: 37px;
-    }
+.bedrijfs-portaal .vector-5 {
+    background-image: url(./icons/wit_potlood.png);
+    background-repeat: no-repeat;
+    height: 45px;
+    left: 745px;
+    position: absolute;
+    top: 6px;
+    width: 35px;
+}
 
     .bedrijfs-portaal .frame-2 {
         height: 112px;
@@ -250,14 +266,15 @@
         white-space: nowrap;
     }
 
-    .bedrijfs-portaal .line {
-        height: 1px;
-        left: 16px;
-        object-fit: cover;
-        position: absolute;
-        top: 81px;
-        width: 572px;
-    }
+.bedrijfs-portaal .line {
+    background-color: #000000;
+    height: 1px;
+    left: 16px;
+    object-fit: cover;
+    position: absolute;
+    top: 81px;
+    width: 572px;
+}
 
     .bedrijfs-portaal .image {
         height: 68px;
@@ -267,3 +284,15 @@
         top: 13px;
         width: 61px;
     }
+@media (max-width: 1000px) {
+    .bedrijfs-portaal .rowstyle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bedrijfs-portaal .frame {
+        width: 100%;
+        height: 110%;
+        left: 0;
+    }
+}

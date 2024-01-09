@@ -4,15 +4,13 @@
 
     .ervaringsdeskundige .div {
         background-color: #ffffff;
-        height: 1017px;
+        height: 101.7vh; 
         overflow: hidden;
         position: relative;
         max-width: 100%;
         margin-right: auto;
         margin-left: auto;
     }
-
-
 
 @media (min-width: 768px) {
     .ervaringsdeskundige {
@@ -24,14 +22,14 @@
         }
 }
 
-
 .ervaringsdeskundige .overlap {
-    height: 471px;
-    left: -280px;
+    height: 47.1vh; 
+    left: -16.67vw; 
     position: absolute;
-    top: -280px;
-    width: 1720px;
+    top: -16.67vw; 
+    width: 100vw; 
 }
+
 
 .ervaringsdeskundige .rectangle {
     background-color: #ffffffb5;
@@ -137,7 +135,7 @@
 
 .ervaringsdeskundige .frame-2 {
     height: 749px;
-    left: 45px;
+    left: 345px;
     position: absolute;
     top: 206px;
     width: 615px
@@ -310,7 +308,7 @@
 
 .ervaringsdeskundige .frame-3 {
     height: 758px;
-    left: 719px;
+    left: 1019px;
     position: absolute;
     top: 197px;
     width: 615px;
@@ -475,15 +473,36 @@
     white-space: nowrap;
     width: 624px;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .ervaringsdeskundige .rowstyle {
         display: flex;
         flex-direction: column;
     }
 
-    .ervaringsdeskundige .overlap,
-    .ervaringsdeskundige .rectangle,
+
+    .ervaringsdeskundige .frame,
+    .ervaringsdeskundige .frame-2 {
+        width: 160%;
+        height: 110%;
+        left: 0;
+    }
+
+    .ervaringsdeskundige .frame-3 {
+        display: flex;
+        width: 160%;
+        left: 719px;
+        height: 110%;
+        order: 1;
+    }
+}
+
+@media (max-width: 1300px) {
+    .ervaringsdeskundige .rowstyle {
+        display: flex;
+        flex-direction: column;
+    }
+
+   
     .ervaringsdeskundige .frame,
     .ervaringsdeskundige .frame-2 {
         width: 160%;
