@@ -4,6 +4,9 @@ import plugin from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import child_process from 'child_process';
+import react from 'react';
+import reactDom from 'react-dom';
+import reactRouterDom from 'react-router-dom';
 
 const baseFolder =
     process.env.APPDATA !== undefined && process.env.APPDATA !== ''
@@ -35,8 +38,8 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
     }
 }
 
+// https://vitejs.dev/config/
 export default defineConfig({
-    base: "/",
     plugins: [plugin()],
     resolve: {
         alias: {
@@ -58,9 +61,7 @@ export default defineConfig({
     },
     build: {
         rollupOptions: {
-            input: {
-                main: fileURLToPath(new URL('./src/main.jsx', import.meta.url)),
-            },
+            external: [react, reactDom, reactRouterDom],
         },
     },
 });
