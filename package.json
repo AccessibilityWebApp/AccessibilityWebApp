@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "deploy": "^1.0.3",
     "react-bootstrap": "^2.9.2",
     "react-bootstrap-icons": "^1.10.3",
     "react-datepicker": "^4.25.0",
@@ -11,5 +12,8 @@
   "scripts": {
     "start": "vite",
     "dev": "vite"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
