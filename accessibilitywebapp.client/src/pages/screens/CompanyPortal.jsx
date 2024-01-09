@@ -2,11 +2,13 @@ import React from 'react';
 import "@/pages/pages_css/CompanyPortal.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import NavbarComponent from "./components/NavbarComponent";
 
 export const BedrijfsPortaal = () => {
     return (
         <Container className="BedrijfsPortaal">
         <div className="bedrijfs-portaal">
+            <NavbarComponent />
             <div className="div">
                     <div className="rectangle" />
                

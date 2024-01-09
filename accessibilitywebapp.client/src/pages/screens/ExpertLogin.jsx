@@ -1,57 +1,48 @@
-import PropTypes from "prop-types";
-import "@/pages/pages_css/Login.css";
+import React from 'react';
+import { Container, Button, Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-export const ExpertLogin = ({ handleToAanmeld, handleToPortal, handleToExpertPortal}) => {
+const ExpertLogin = ({ handleToAanmeld, handleToPortal, handleToExpertPortal }) => {
     return (
-        <div className="inlogpagina">
-            <div className="div">
-                <div className="frame" />
-                <div className="overlap-group">
-                    <div className="frame-2" />
-                    <img className="frame-3" alt="logo" src="/icons/logo.png" />
+        <Container fluid className="margin">
+            <h1 className="mb-3">Login</h1>
+            <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Gebruikersnaam / E-Mail</Form.Label>
+                    <Form.Control type="email" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Wachtwoord</Form.Label>
+                    <Form.Control type="password" placeholder="" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Aangemeld blijven" />
+                </Form.Group>
+
+                <div className="d-grid gap-2">
+                    <Button variant="secondary" onClick={handleToPortal}>
+                        Back
+                    </Button>
+                    <Button variant="primary" onClick={handleToExpertPortal}>
+                        Next
+                    </Button>
                 </div>
 
-                <div className="LoginFrame">
-                    <div className="frame-4">
-                        <div className="text-wrapper">Log in</div>
-                        <div className="overlap-wrapper">
-                            <input
-                                type="text"
-                                className="entry-box"
-                                placeholder="Gebruiker"
-                            />
-                        </div>
-
-                        <div className="group">
-                            <input
-                                type="password"
-                                className="entry-box"
-                                placeholder="Wachtwoord"
-                            />
-                        </div>
-
-                        <div className="frame-5">
-                            <input type="checkbox" className="checkbox" />
-                            <div className="text-wrapper-2">Onthoud mij</div>
-                        </div>
-
-                        <div className="frame-6">
-                            <div className="rectangle2" onClick={handleToPortal}>Terug</div>
-                            <div className="rectangle3" onClick={handleToExpertPortal}>Volgende</div>
-                        </div>
-
-                        <div className="frame-7">
-                            <div className="text-wrapper-5">Wachtwoord vergeten?</div>
-                        </div>
-
-                        <div className="frame-8">
-                            <div className="text-wrapper-4">Heb je nog geen account?</div>
-                            <div className="aanmelden" onClick={handleToAanmeld}>Meld je hier aan</div>
-                        </div>
-                    </div>
+                <div className="mt-3">
+                    <Button variant="link">
+                        Wachtwoord vergeten?
+                    </Button>
                 </div>
-            </div>
-        </div>
+
+                <div className="mt-3">
+                    <Button variant="link">
+                        Heb je nog geen account? Meld je hier aan
+                    </Button>
+                </div>
+            </Form>
+        </Container>
     );
 };
 
