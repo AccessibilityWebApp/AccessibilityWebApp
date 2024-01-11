@@ -13,15 +13,15 @@ export const Ervaringsdeskundige = () => {
             <Row className="rowstyle">
                 <Col xs={12} md={7} lg={4}>
                     <div className="frame-2">
-                        <div className="text-wrapper-5">Uw onderzoeken:</div>
+                        <header className="text-wrapper-5">Uw onderzoeken:</header>
                         <div className="overlap-group-2">
                             <div className="rectangle-2" />
-                            <div className="text-wrapper-8">Onderzoek KPN</div>
+                            <header className="text-wrapper-8">Onderzoek KPN</header>
                             <div className="rectangle-3" />
-                            <div className="text-wrapper-9">Onderzoek ING</div>
+                            <header className="text-wrapper-9">Onderzoek ING</header>
                             <div className="rectangle-4" />
                             <div className="rectangle-5" />
-                            <div className="text-wrapper-11">Onderzoek Hema</div>
+                            <header className="text-wrapper-11">Onderzoek Hema</header>
                         </div>
                         <div className="rectangle-wrapper">
                             <div className="rectangle-6" />
@@ -31,21 +31,21 @@ export const Ervaringsdeskundige = () => {
                 </Col>
                     <Col xs={12} md={7} lg={4}>
                         <div className="parent-of-frame-3">
-                    <div className="frame-3">
+                        <div className="frame-3">
+                            <header className="text-wrapper-18">Uw voltooide onderzoeken:</header>
                         <div className="overlap-2">
                             <div className="rectangle-8" />
-                            <div className="text-wrapper-14">Onderzoek KPN</div>
+                            <header className="text-wrapper-14">Onderzoek KPN</header>
                             <div className="rectangle-9" />
-                            <div className="text-wrapper-15">Onderzoek ING</div>
+                            <header className="text-wrapper-15">Onderzoek ING</header>
                             <div className="rectangle-10" />
                             <div className="rectangle-11" />
-                            <div className="text-wrapper-17">Onderzoek Hema</div>
+                            <header className="text-wrapper-17">Onderzoek Hema</header>
                         </div>
                         <div className="div-wrapper">
                             <div className="rectangle-6" />
                         </div>
                         <div className="rectangle-12" />
-                        <div className="text-wrapper-18">Uw voltooide onderzoeken:</div>
                             </div>
                     </div>
                 </Col>

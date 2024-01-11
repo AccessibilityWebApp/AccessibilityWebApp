@@ -17,23 +17,26 @@ export const BedrijfsPortaal = () => {
                 <div className="frame">
                     <div className="overlap">
                         <div className="vector" />
-                        <div className="text-wrapper">Onderzoek app ING</div>
+                        <header className="text-wrapper">Onderzoek app ING</header>
                     </div>
                     <div className="overlap-group">
-                        <div className="img"/>
-                        <div className="vector-2"/>
+                                    <header aria-placeholder="klik hier om een nieuw onderzoek aan te maken">
+                                        <div className="img" />
+                                        <div className="vector-2" />
+                                        
+                                    </header>
                     </div>
-                    <div className="text-wrapper-2">Uw onderzoeken:</div>
+                    <header className="text-wrapper-2">Uw onderzoeken:</header>
                     <div className="overlap-group-2">
-                        <div className="text-wrapper-3">Onderzoek website ING</div>
+                        <header className="text-wrapper-3">Onderzoek website ING</header>
                         <div className="vector-3"/>
                     </div>
                     <div className="overlap-2">
                         <div className="vector-4"/>
-                        <div className="text-wrapper-4">Onderzoek app ING</div>
+                        <header className="text-wrapper-4">Onderzoek app ING</header>
                     </div>
                     <div className="overlap-3">
-                        <div className="text-wrapper-4">Onderzoek app ING</div>
+                        <header className="text-wrapper-4">Onderzoek app ING</header>
                         <div className="vector-5"/>
                     </div>
                     </div>
