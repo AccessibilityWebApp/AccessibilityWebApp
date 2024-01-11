@@ -1,8 +1,28 @@
+import React, { useState } from "react";
+import {
+    Button,
+    Form,
+    FormControl,
+    Row,
+    Col,
+    Container,
+} from "react-bootstrap";
 import PropTypes from "prop-types";
 import "@/pages/pages_css/ExpertSignUp.css";
-import ExpertSignUpController from '@/pages/pages_controllers/ExpertSignUp_Controller';
+import ExpertSignUpController from "@/pages/pages_controllers/ExpertSignUp_Controller";
 
 export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDeSfault();
+            event.stopPropagation();
+        }
+        setValidated(true);
+    };
+
     const {
         selectedTypesApproach,
         selectedTypesSoort,
@@ -16,129 +36,170 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
     } = ExpertSignUpController();
 
     return (
-        <div className="expertsignup">
-            <div className="div">
-                <div className="frame" />
-                <div className="frame-2" />
-                <div className="frame-3">
+        <Container>
+            <h1>Account aanmaken</h1>
+            <Form
+                noValidate
+                validated={validated}
+                onSubmit={handleSubmit}
+                className="w-50"
+            >
+                <Row>
+                    <Form.Group as={Col} controlId="username">
+                        <Form.Label>Gebruikersnaam:</Form.Label>
+                        <Form.Control type="text" name="username" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw gebruikersnaam in.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
 
-                    <div className="frame-4">
-                        <div className="text-wrapper">Aanmelden</div>
-                        <div className="image-container"></div>
-                    </div>
+                    <Form.Group as={Col} controlId="password">
+                        <Form.Label>Wachtwoord:</Form.Label>
+                        <Form.Control type="password" name="password" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw wachtwoord in.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+                <Row>
+                    <Form.Group as={Col} controlId="voorletter">
+                        <Form.Label>Voorletter(s):</Form.Label>
+                        <Form.Control type="text" name="firstletter" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw wachtwoord in.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
 
-                    <input className="user" type="text" placeholder="Gebruikersnaam" />
-                    <input className="pass" type="password" placeholder="Wachtwoord" />
-                    <input className="letters" type="text" placeholder="Voorletter(s)" />
-                    <input className="surname" type="text" placeholder="Achternaam" />
-                    <input className="zip" type="text" placeholder="Postcode" />
+                    <Form.Group as={Col} controlId="achternaam">
+                        <Form.Label>Achternaam:</Form.Label>
+                        <Form.Control type="text" name="surname" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw achternaam in.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
 
+                <Form.Group controlId="postcode">
+                    <Form.Label>Postcode:</Form.Label>
+                    <Form.Control type="text" name="postalcode" required />
+                    <Form.Control.Feedback type="invalid">
+                        Vul een geldige postcode in.
+                    </Form.Control.Feedback>
+                    <Form.Control.Feedback type="valid">
+                        Ziet er goed uit!
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-                    <select className="age" onChange={handleAgeChange}>
-                        <option value="" disabled selected hidden>Leeftijdsgroep</option>
-                        <option value="18-">18-</option>
-                        <option value="18-55">18-55</option>
-                        <option value="55+">55+</option>
-                    </select>
+                <Form.Group controlId="leeftijd">
+                    <Form.Label>Leeftijdscategorie</Form.Label>
+                    <FormControl as="select" required>
+                        <option value=""></option>
+                        <option value="option1">Onder de 18</option>
+                        <option value="option2">18-30</option>
+                        <option value="option3">31-45</option>
+                        <option value="option4">45+</option>
+                    </FormControl>
+                    <Form.Control.Feedback type="invalid">
+                        Kies uw leeftijdscategorie.
+                    </Form.Control.Feedback>
+                    <Form.Control.Feedback type="valid">
+                        Ziet er goed uit!
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-                    <input className="mail" type="text" placeholder="E-Mail" />
-                    <input className="phone" type="text" placeholder="Telefoonnummer" />
+                <Form.Group controlId="email">
+                    <Form.Label>E-Mail adres:</Form.Label>
+                    <Form.Control type="text" name="email" required />
+                    <Form.Control.Feedback type="invalid">
+                        Vul een geldig e-mail adres in.
+                    </Form.Control.Feedback>
+                    <Form.Control.Feedback type="valid">
+                        Ziet er goed uit!
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-                    <select className="approach" onChange={handleApproachChange}>
-                        <option value="" disabled selected hidden>Voorkeur benadering</option>
-                        <option value="Telefoon">Telefoon</option>
-                        <option value="E-Mail">E-Mail</option>
-                    </select>
+                <Form.Group controlId="nummer">
+                    <Form.Label>Telefoonnummer:</Form.Label>
+                    <Form.Control type="text" name="telnumber" required />
+                    <Form.Control.Feedback type="invalid">
+                        Vul een geldig telefoonnummer in.
+                    </Form.Control.Feedback>
+                    <Form.Control.Feedback type="valid">
+                        Ziet er goed uit!
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Row>
+                    <Form.Group as={Col} controlId="benadering">
+                        <Form.Label>Voorkeur benadering</Form.Label>
+                        <FormControl as="select" required>
+                            <option value=""></option>
+                            <option value="option1">Optie 1</option>
+                            <option value="option2">Optie 2</option>
+                        </FormControl>
+                        <Form.Control.Feedback type="invalid">
+                            Kies een voorkeur.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
 
-                    {selectedTypesApproach.length > 0 && (
-                        <div className="boxes-container">
-                            {selectedTypesApproach.map((type, index) => (
-                                <div key={index} className="box-frame">
-                                    <div className="content-container">
-                                        <span className="dot">&#8226;</span>
-                                        <div className="type-text">{type}</div>
-                                    </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'approach')}>X</button>
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                    <Form.Group as={Col} controlId="onderzoek">
+                        <Form.Label>Voorkeur onderzoek</Form.Label>
+                        <FormControl as="select" required>
+                            <option value=""></option>
+                            <option value="option1">Optie 1</option>
+                            <option value="option2">Optie 2</option>
+                        </FormControl>
+                        <Form.Control.Feedback type="invalid">
+                            Kies een voorkeur.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
 
-                    <select className="sort" onChange={handleSoortChange}>
-                        <option value="" disabled selected hidden>Voorkeur soort onderzoek</option>
-                        <option value="Visuele beperking">Visuele beperking</option>
-                        <option value="Auditieve beperking">Auditieve beperking</option>
-                        <option value="Motorische beperking">Motorische beperking</option>
-                        <option value="Verstandelijke beperking">Verstandelijke beperking</option>
-                        <option value="Digibeet">Digibeet</option>
-                    </select>
+                <Form.Check
+                    type="checkbox"
+                    label="Mogen commerciele partijen U benaderen?"
+                    className="mt-3"
+                />
 
-                    {selectedTypesSoort.length > 0 && (
-                        <div className="boxes-container">
-                            {selectedTypesSoort.map((type, index) => (
-                                <div key={index} className="box-frame">
-                                    <div className="content-container">
-                                        <span className="dot">&#8226;</span>
-                                        <div className="type-text">{type}</div>
-                                    </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'soort')}>X</button>
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                <Button variant="primary" type="submit" className="w-100 mt-3">
+                    Maak account
+                </Button>
+                <Row>
+                    <Col>
+                        <p className="p-2">Heeft u al een account?</p>
+                    </Col>
 
-                    <select className="type" onChange={handleTypeChange}>
-                        <option value="" disabled selected hidden>Voorkeur type onderzoek</option>
-                        <option value="Interview">Interview</option>
-                        <option value="Groepsgesprek">Groepsgesprek</option>
-                        <option value="Online onderzoek">Online onderzoek</option>
-                        <option value="Engelstalig onderzoek">Engelstalig onderzoek</option>
-                    </select>
-
-                    {selectedTypesType.length > 0 && (
-                        <div className="boxes-container">
-                            {selectedTypesType.map((type, index) => (
-                                <div key={index} className="box-frame">
-                                    <div className="content-container">
-                                        <span className="dot">&#8226;</span>
-                                        <div className="type-text">{type}</div>
-                                    </div>
-                                    <button className="delete-button" onClick={() => handleRemoveType(index, 'type')}>X</button>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-
-                    {showAdditionalBoxes && (
-                        <>
-                            <div className="voogd-container">
-                                <div className="voogd">Voogd</div>
-                            </div>
-                            <input className="voorletters" type="text" placeholder="Voorletter(s)" />
-                            <input className="achternaam" type="text" placeholder="Achternaam" />
-                            <input className="telefoonnummer" type="text" placeholder="Telefoonnummer" />
-                            <input className="email" type="text" placeholder="E-Mail" />
-                        </>
-                    )}
-
-                    <div className="frame-5">
-                        <input type="checkbox" className="checkbox" />
-                        <div className="text-wrapper-4">Mogen commerciele partijen u benaderen?</div>
-                    </div>
-
-
-                    <div className="frame-6">
-                        <div className="overlap-group">
-                            <div className="text-wrapper-2">Heb je al een account?</div>
-                            <div className="login" onClick={handleToLogin}>Log hier in</div>
-                        </div>
-                    </div>
-                    <div className="frame-7">
-                        <div className="rectangle2" onClick={handleToExpertPortal}>Volgende</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <Col>
+                        <Button
+                            href="ExpertLogin"
+                            variant="success"
+                            type="submit"
+                            size="sm"
+                            className="mt-2 text-left"
+                        >
+                            Log hier in
+                        </Button>
+                    </Col>
+                </Row>
+            </Form>
+        </Container>
     );
 };
 
