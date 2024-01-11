@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Row, Col } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import PropTypes from "prop-types";
 import "@/pages/pages_css/Login.css";
 
@@ -21,7 +21,7 @@ const ExpertLogin = ({
     };
 
     return (
-        <body className="logIn">
+        <body className="achtergrond">
             <div id="login-form">
                 <h1>Inloggen</h1>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -41,39 +41,20 @@ const ExpertLogin = ({
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Check type="checkbox" label="Blijf ingelogd" className="mt-3" />
+                    <Form.Check type="checkbox" label="Blijf ingelogd" className="mt-1" />
 
-                    <Button variant="primary" type="submit" className="w-100 mt-3">
+                    <Button href="expert_portal" variant="primary" type="submit">
                         Aanmelden
                     </Button>
+                    <Button
+                        href="expert_signup"
+                        variant="success"
+                        type="submit"
+                        className="m-3">
+                        Registreren
+                    </Button>
 
-                    <Row>
-                        <Col>
-                            <Button
-                                variant="link"
-                                type="submit"
-                                size="sm"
-                                className="mt-2 p-0"
-                            >
-                                Wachtwoord vergeten?
-                            </Button>
-                        </Col>
-
-                        <Col>
-                            <p className="forgotPass">Heb je nog geen account?</p>
-                        </Col>
-                        <Col>
-                            <Button
-                                href="expert_signup"
-                                variant="success"
-                                type="submit"
-                                size="sm"
-                                className="mt-2 text-left"
-                            >
-                                Registreren
-                            </Button>
-                        </Col>
-                    </Row>
+                    <a href="" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
                 </Form>
             </div>
         </body>

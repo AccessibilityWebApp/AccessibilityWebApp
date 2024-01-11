@@ -21,11 +21,12 @@
 
 .forgotPass {
     text-decoration: none;
-    margin-top: 1rem;
-    font-size: 90%;
+    margin: 1rem;
+
 }
 
 
-.logIn {
+.achtergrond {
     background: linear-gradient(to right, #3051ea, #19a783);
+    height: 100vh
 }
