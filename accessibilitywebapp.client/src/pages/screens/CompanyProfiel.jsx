@@ -8,6 +8,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <body className="achtergrond">
@@ -18,8 +19,8 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                 <Image src="./icons/KPN.png" rounded />
             </div>
 
-                <Form className="mt-5">
-                <Form.Group controlId="formProfileName">
+                <Form>
+                <Form.Group className="mt-3" controlId="formProfileUserName">
                     <Form.Label>Gebruikersnaam</Form.Label>
                     <FormControl
                         type="text"
@@ -27,7 +28,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group controlId="formProfileName">
+                <Form.Group className="mt-3" controlId="formProfileCompanyName">
                     <Form.Label>Bedrijfsnaam</Form.Label>
                     <FormControl
                         type="text"
@@ -35,7 +36,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group controlId="formProfileSurname">
+                <Form.Group className="mt-3" controlId="formProfileDescription">
                     <Form.Label>Beschrijving</Form.Label>
                     <FormControl
                         type="text"
@@ -43,7 +44,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group controlId="formProfilePostalcode">
+                <Form.Group className="mt-3" controlId="formProfileLocation">
                     <Form.Label>Locatie bedrijf</Form.Label>
                     <FormControl
                         type="text"
@@ -51,7 +52,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfileEmail">
+                <Form.Group className="mt-3" controlId="formProfileLink">
                     <Form.Label>Link bedrijf</Form.Label>
                     <FormControl
                         type="email"
@@ -59,7 +60,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
+                <Form.Group className="mt-3" controlId="formProfileKVK-Number">
                     <Form.Label>KVK-nummer</Form.Label>
                     <FormControl
                         type="text"
@@ -67,7 +68,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
+                <Form.Group className="mt-3" controlId="formProfileContact">
                     <Form.Label>Contactpersoon</Form.Label>
                     <FormControl className="mb-3"
                         type="text"
@@ -83,30 +84,30 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Button variant="success" type="submit" className="Knop me-3">
+                <Button variant="success" type="submit" className="mt-3">
                     Bevestig
                 </Button>
 
-                <Button variant="danger" type="submit" className="Knop">
-                    Verwijder Account
-                </Button>
+                    <Button variant="danger" type="button" className="mt-3" onClick={handleShow}>
+                        Verwijder Account
+                    </Button>
 
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Verwijder Account</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        Weet u zeker dat u uw account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Annuleren
-                        </Button>
-                        <Button variant="danger" onClick={handleClose}>
-                            Verwijderen
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Verwijder Account</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            Weet u zeker dat u uw account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Annuleren
+                            </Button>
+                            <Button variant="danger" onClick={handleClose}>
+                                Verwijderen
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
             </Form>
         </Container>
         </body >

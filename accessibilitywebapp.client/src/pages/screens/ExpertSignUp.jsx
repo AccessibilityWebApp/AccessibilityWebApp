@@ -104,7 +104,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
         </Form.Group>
 
                     <Form.Group controlId="leeftijd" className="mt-3">
-          <Form.Label>Leeftijdscategorie</Form.Label>
+          <Form.Label>Leeftijdscategorie:</Form.Label>
           <FormControl as="select" required>
             <option value=""></option>
             <option value="option1">Onder de 18</option>
@@ -143,7 +143,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
         </Form.Group>
         <Row>
                         <Form.Group as={Col} controlId="benadering" className="mt-3">
-            <Form.Label>Voorkeur benadering</Form.Label>
+            <Form.Label>Voorkeur benadering:</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
               <option value="option1">Optie 1</option>
@@ -158,7 +158,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Group>
 
                         <Form.Group as={Col} controlId="onderzoek" className="mt-3">
-            <Form.Label>Voorkeur onderzoek</Form.Label>
+            <Form.Label>Voorkeur onderzoek:</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
               <option value="option1">Optie 1</option>

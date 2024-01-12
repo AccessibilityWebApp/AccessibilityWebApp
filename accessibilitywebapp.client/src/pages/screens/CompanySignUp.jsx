@@ -81,7 +81,7 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="voorletter" className="mt-3">
-                        <Form.Label>Beschrijving bedrijf::</Form.Label>
+                        <Form.Label>Beschrijving bedrijf:</Form.Label>
                         <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul een beschrijving van het bedrijf in.

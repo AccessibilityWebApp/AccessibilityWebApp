@@ -19,8 +19,16 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     <Image src="./icons/kou_logo.png" rounded />
                 </div>
                 <Form>
+                    <Form.Group className="mt-3" controlId="formProfileUserName">
+                        <Form.Label>Gebruikersnaam</Form.Label>
+                        <FormControl
+                            type="text"
+                            placeholder="IsoCan070"
+                        />
+                    </Form.Group>
+
                     <Row className="mt-3"> 
-                        <Form.Group as={Col} controlId="formProfileName">
+                        <Form.Group as={Col} controlId="formProfileFirstLetter">
                     <Form.Label>Voorletters</Form.Label>
                     <FormControl
                         type="text"
@@ -45,7 +53,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfileAge">
+                <Form.Group className="mt-3" controlId="formProfileAge">
                     <Form.Label>Leeftijdscategorie</Form.Label>
                     <FormControl as="select" required>
                         <option value=""></option>
@@ -56,7 +64,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     </FormControl>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfileEmail">
+                <Form.Group className="mt-3" controlId="formProfileEmail">
                     <Form.Label>E-Mail adres</Form.Label>
                     <FormControl
                         type="email"
@@ -64,7 +72,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
+                <Form.Group className="mt-3" controlId="formProfilePhoneNumber">
                     <Form.Label>Telefoonnummer</Form.Label>
                     <FormControl
                         type="text"
@@ -72,8 +80,8 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfileContactMethod">
-                    <Form.Label>Contactmethode</Form.Label>
+                <Form.Group className="mt-3" controlId="formProfileContactMethod">
+                    <Form.Label>Voorkeur benadering</Form.Label>
                     <FormControl as="select" required>
                         <option value=""></option>
                         <option value="option1">Telefonisch</option>
@@ -81,8 +89,8 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     </FormControl>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formProfileOptions">
-                    <Form.Label>Beperking</Form.Label>
+                <Form.Group className="mt-3" controlId="formProfileOptions">
+                    <Form.Label>Voorkeur onderzoek</Form.Label>
                     <FormControl as="select" required>
                         <option value="">Kies een beperking</option>
                         <option value="option1">Optie1</option>
@@ -92,12 +100,12 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                 </Form.Group>
 
 
-                <Button variant="success" type="submit" className="Knop me-3">
+                <Button variant="success" type="submit" className="mt-3">
                     Bevestig
                 </Button>
 
 
-                    <Button variant="danger" type="button" className="Knop" onClick={handleShow}>
+                    <Button variant="danger" type="button" className="mt-3" onClick={handleShow}>
                         Verwijder Account
                     </Button>
 
