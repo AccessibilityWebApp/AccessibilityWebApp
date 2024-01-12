@@ -68,18 +68,18 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                             </Form.Control.Feedback>
                         </Form.Group>
                     </Row>
-                    <Row>
-                        <Form.Group as={Col} controlId="voorletter">
-                            <Form.Label>Bedrijfsnaam:</Form.Label>
-                            <Form.Control type="text" name="firstletter" required />
-                            <Form.Control.Feedback type="invalid">
-                                Vul uw bedrijfsnaam in.
-                            </Form.Control.Feedback>
-                            <Form.Control.Feedback type="valid">
-                                Ziet er goed uit!
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
+                    
+                    <Form.Group as={Col} controlId="voorletter">
+                        <Form.Label>Bedrijfsnaam:</Form.Label>
+                        <Form.Control type="text" name="firstletter" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw bedrijfsnaam in.
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback type="valid">
+                            Ziet er goed uit!
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    
 
                     <Form.Group controlId="postcode">
                         <Form.Label>Locatie bedrijf:</Form.Label>
@@ -124,23 +124,24 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                             Ziet er goed uit!
                         </Form.Control.Feedback>
                     </Form.Group>
+
                     <Row>
-                        <Form.Group controlId="nummer">
-                            <Form.Label>Telefoonnummer:</Form.Label>
-                            <Form.Control type="text" name="telnumber" required />
+                        <Form.Group as={Col} controlId="username">
+                            <Form.Label>Email-adres:</Form.Label>
+                            <Form.Control type="text" name="username" required />
                             <Form.Control.Feedback type="invalid">
-                                Vul een geldig telefoonnummer in.
+                                Vul uw email-adres in.
                             </Form.Control.Feedback>
                             <Form.Control.Feedback type="valid">
                                 Ziet er goed uit!
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group controlId="nummer">
-                            <Form.Label>Email-adress:</Form.Label>
-                            <Form.Control type="text" name="telnumber" required />
+                        <Form.Group as={Col} controlId="password">
+                            <Form.Label>Telefoonnummer:</Form.Label>
+                            <Form.Control type="password" name="password" required />
                             <Form.Control.Feedback type="invalid">
-                                Vul een geldig email-adres in.
+                                Vul uw telefoonnummer in.
                             </Form.Control.Feedback>
                             <Form.Control.Feedback type="valid">
                                 Ziet er goed uit!
@@ -148,19 +149,14 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Group>
                     </Row>
 
-                    <Form.Check
-                        type="checkbox"
-                        label="Mogen commerciele partijen U benaderen?"
-                        className="mt-3"
-                    />
-
                     <Button variant="primary" type="submit" className="w-100 mt-3">
                         Maak account
                     </Button>
+
                     <p className="p-2">Heeft u al een account?</p>
 
                     <Button
-                        href="ExpertLogin"
+                        href="CompanyLogin"
                         variant="success"
                         type="submit"
                         size="sm"
