@@ -13,7 +13,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
     return (
         <body className="achtergrond">
             <Container fluid id="profile-form" className="w-50 p-5">
-                <NavbarComponent />
+                <NavbarComponent portalType="expert" />
 
                 <div className="text-center">
                     <Image src="./icons/kou_logo.png" rounded />

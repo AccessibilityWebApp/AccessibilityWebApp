@@ -8,7 +8,7 @@ export const BedrijfsPortaal = () => {
     return (
         <Container className="BedrijfsPortaal">
         <div className="bedrijfs-portaal">
-            <NavbarComponent />
+                <NavbarComponent portalType="company" />
             <div className="div">
                     <div className="rectangle" />
                

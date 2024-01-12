@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { Container, Image, Form, FormControl, Button } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
 
-export const BedrijfProfiel = ({ handleToExpertPortal }) => {
+export const CompanyProfiel = ({ handleToExpertPortal }) => {
     return (
         <Container fluid className="margin mb-5">
-            <NavbarComponent />
+            <NavbarComponent portalType="company" />
 
             <div className="text-center">
                 <Image src="./icons/kou_logo.png" rounded />
@@ -80,8 +80,8 @@ export const BedrijfProfiel = ({ handleToExpertPortal }) => {
     );
 };
 
-BedrijfProfiel.propTypes = {
+CompanyProfiel.propTypes = {
     handleToExpertPortal: PropTypes.func.isRequired,
 };
 
-export default BedrijfProfiel;
+export default CompanyProfiel;

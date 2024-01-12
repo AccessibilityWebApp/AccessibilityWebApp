@@ -1,8 +1,10 @@
-﻿import Nav from 'react-bootstrap/Nav';
+﻿import React from 'react';
+import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+function NavbarComponent({ portalType }) {
+    const homeLink = `/${portalType}_portal`; // home link based on portalType
 
-function NavbarComponent() {
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" fixed="top">
             <Navbar.Brand>
@@ -18,9 +20,9 @@ function NavbarComponent() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="Portal">Home</Nav.Link>
-                    <Nav.Link href="ExpertProfiel">Profiel</Nav.Link>
-                    <Nav.Link href="#pricing">Log Uit</Nav.Link>
+                    <Nav.Link href={`${portalType}_portal`}>Home</Nav.Link>
+                    <Nav.Link href={`${portalType}Profiel`}>Profiel</Nav.Link>
+                    <Nav.Link href={`portal`}>Log Uit</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

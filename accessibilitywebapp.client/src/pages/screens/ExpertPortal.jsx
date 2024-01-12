@@ -8,7 +8,7 @@ export const Ervaringsdeskundige = () => {
     return (
         <Container className="ervaringsdeskundige">
 
-            <NavbarComponent />
+            <NavbarComponent portalType="expert" />
 
             <Row className="rowstyle">
                 <Col xs={12} md={7} lg={4}>
