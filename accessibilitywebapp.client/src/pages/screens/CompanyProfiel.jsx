@@ -1,19 +1,26 @@
+import React, { useState } from "react";
+import { Container, Image, Form, FormControl, Button, Modal } from 'react-bootstrap';
 import PropTypes from "prop-types";
-import { Container, Image, Form, FormControl, Button } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
 
+
 export const CompanyProfiel = ({ handleToExpertPortal }) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+
     return (
-        <Container fluid className="margin mb-5">
+        <body className="achtergrond">
+            <Container fluid id="profile-form" className="w-50 p-5">
             <NavbarComponent portalType="company" />
 
             <div className="text-center">
-                <Image src="./icons/kou_logo.png" rounded />
+                <Image src="./icons/KPN.png" rounded />
             </div>
 
-            <Form className="mt-5">
+                <Form className="mt-5">
                 <Form.Group controlId="formProfileName">
-                    <Form.Label>Naam</Form.Label>
+                    <Form.Label>Gebruikersnaam</Form.Label>
                     <FormControl
                         type="text"
                         placeholder="KPN"
@@ -37,7 +44,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                 </Form.Group>
 
                 <Form.Group controlId="formProfilePostalcode">
-                    <Form.Label>Plaats</Form.Label>
+                    <Form.Label>Locatie bedrijf</Form.Label>
                     <FormControl
                         type="text"
                         placeholder="Urk"
@@ -45,7 +52,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formProfileEmail">
-                    <Form.Label>Link</Form.Label>
+                    <Form.Label>Link bedrijf</Form.Label>
                     <FormControl
                         type="email"
                         placeholder="https://www.kpn.com/"
@@ -53,7 +60,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
-                    <Form.Label>Telefoonnummer</Form.Label>
+                    <Form.Label>KVK-nummer</Form.Label>
                     <FormControl
                         type="text"
                         placeholder="76394657"
@@ -83,8 +90,26 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                 <Button variant="danger" type="submit" className="Knop">
                     Verwijder Account
                 </Button>
+
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Verwijder Account</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Weet u zeker dat u uw account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Annuleren
+                        </Button>
+                        <Button variant="danger" onClick={handleClose}>
+                            Verwijderen
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </Form>
         </Container>
+        </body >
     );
 };
 
