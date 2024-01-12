@@ -19,7 +19,7 @@ function NavbarComponent() {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="Portal">Home</Nav.Link>
-                    <Nav.Link href="#profiel">Profiel</Nav.Link>
+                    <Nav.Link href="ExpertProfiel">Profiel</Nav.Link>
                     <Nav.Link href="#pricing">Log Uit</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

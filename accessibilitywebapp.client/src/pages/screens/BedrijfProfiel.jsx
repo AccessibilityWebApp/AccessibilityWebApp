@@ -58,11 +58,11 @@ export const BedrijfProfiel = ({ handleToExpertPortal }) => {
                         type="text"
                         placeholder="Mohamed Rahim"
                     />
-                    <FormControl
+                    <FormControl className="mb-3"
                         type="text"
                         placeholder="06420691234"
                     />
-                    <FormControl
+                    <FormControl className="mb-3"
                         type="text"
                         placeholder="Mohamed@KPN.nl"
                     />

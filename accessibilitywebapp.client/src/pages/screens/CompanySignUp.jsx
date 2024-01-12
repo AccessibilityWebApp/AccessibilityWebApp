@@ -46,9 +46,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                     onSubmit={handleSubmit}
                 >
                     <Row>
-                        <Form.Group as={Col} controlId="username">
+                        <Form.Group as={Col} controlId="username" className="mt-3">
                             <Form.Label>Gebruikersnaam:</Form.Label>
-                            <Form.Control type="text" name="username" required />
+                            <Form.Control type="text" required />
                             <Form.Control.Feedback type="invalid">
                                 Vul uw gebruikersnaam in.
                             </Form.Control.Feedback>
@@ -57,9 +57,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="password">
+                        <Form.Group as={Col} controlId="password" className="mt-3">
                             <Form.Label>Wachtwoord:</Form.Label>
-                            <Form.Control type="password" name="password" required />
+                            <Form.Control type="password" required />
                             <Form.Control.Feedback type="invalid">
                                 Vul uw wachtwoord in.
                             </Form.Control.Feedback>
@@ -69,9 +69,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Group>
                     </Row>
                     
-                    <Form.Group as={Col} controlId="voorletter">
+                    <Form.Group as={Col} controlId="voorletter" className="mt-3">
                         <Form.Label>Bedrijfsnaam:</Form.Label>
-                        <Form.Control type="text" name="firstletter" required />
+                        <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul uw bedrijfsnaam in.
                         </Form.Control.Feedback>
@@ -81,9 +81,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                     </Form.Group>
                     
 
-                    <Form.Group controlId="postcode">
+                    <Form.Group controlId="postcode" className="mt-3">
                         <Form.Label>Locatie bedrijf:</Form.Label>
-                        <Form.Control type="text" name="postalcode" required />
+                        <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul een geldige Locatie in.
                         </Form.Control.Feedback>
@@ -92,9 +92,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group controlId="postcode">
+                    <Form.Group controlId="postcode" className="mt-3">
                         <Form.Label>Link bedrijf:</Form.Label>
-                        <Form.Control type="text" name="postalcode" required />
+                        <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul een geldige Link in.
                         </Form.Control.Feedback>
@@ -103,9 +103,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group controlId="email">
+                    <Form.Group controlId="email" className="mt-3">
                         <Form.Label>KVK-nummer:</Form.Label>
-                        <Form.Control type="text" name="email" required />
+                        <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul een geldig KVK-nummer in.
                         </Form.Control.Feedback>
@@ -114,9 +114,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group controlId="nummer">
+                    <Form.Group controlId="nummer" className="mt-3">
                         <Form.Label>Contact persoon:</Form.Label>
-                        <Form.Control type="text" name="telnumber" required />
+                        <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
                             Vul een geldig naam in.
                         </Form.Control.Feedback>
@@ -126,9 +126,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                     </Form.Group>
 
                     <Row>
-                        <Form.Group as={Col} controlId="username">
+                        <Form.Group as={Col} controlId="username" className="mt-3">
                             <Form.Label>Email-adres:</Form.Label>
-                            <Form.Control type="text" name="username" required />
+                            <Form.Control type="text" required />
                             <Form.Control.Feedback type="invalid">
                                 Vul uw email-adres in.
                             </Form.Control.Feedback>
@@ -137,9 +137,9 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="password">
+                        <Form.Group as={Col} controlId="nummer" className="mt-3">
                             <Form.Label>Telefoonnummer:</Form.Label>
-                            <Form.Control type="password" name="password" required />
+                            <Form.Control type="text" required />
                             <Form.Control.Feedback type="invalid">
                                 Vul uw telefoonnummer in.
                             </Form.Control.Feedback>
@@ -153,14 +153,14 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         Maak account
                     </Button>
 
-                    <p className="p-2">Heeft u al een account?</p>
+                    <p className="p-2 mt-3">Heeft u al een account?</p>
 
                     <Button
                         href="CompanyLogin"
                         variant="success"
                         type="submit"
                         size="sm"
-                        className="mt-2 text-left"
+                        className="mt-3 text-left"
                     >
                         Log hier in
                     </Button>

@@ -5,7 +5,8 @@ import {
   FormControl,
   Row,
   Col,
-  Container,
+    Container,
+  Modal
 } from "react-bootstrap";
 import PropTypes from "prop-types";
 import "@/pages/pages_css/ExpertSignUp.css";
@@ -43,10 +44,9 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
       <Form
         noValidate
         validated={validated}
-        onSubmit={handleSubmit}
-      >
+        onSubmit={handleSubmit}>
         <Row>
-          <Form.Group as={Col} controlId="username">
+                        <Form.Group as={Col} controlId="username" className="mt-3">
             <Form.Label>Gebruikersnaam:</Form.Label>
             <Form.Control type="text" name="username" required />
             <Form.Control.Feedback type="invalid">
@@ -57,7 +57,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="password">
+                        <Form.Group as={Col} controlId="password" className="mt-3">
             <Form.Label>Wachtwoord:</Form.Label>
             <Form.Control type="password" name="password" required />
             <Form.Control.Feedback type="invalid">
@@ -69,7 +69,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Group>
         </Row>
         <Row>
-          <Form.Group as={Col} controlId="voorletter">
+                        <Form.Group as={Col} controlId="voorletter" className="mt-3">
             <Form.Label>Voorletter(s):</Form.Label>
             <Form.Control type="text" name="firstletter" required />
             <Form.Control.Feedback type="invalid">
@@ -80,7 +80,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="achternaam">
+                        <Form.Group as={Col} controlId="achternaam" className="mt-3">
             <Form.Label>Achternaam:</Form.Label>
             <Form.Control type="text" name="surname" required />
             <Form.Control.Feedback type="invalid">
@@ -92,7 +92,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Group>
         </Row>
 
-        <Form.Group controlId="postcode">
+                    <Form.Group controlId="postcode" className="mt-3">
           <Form.Label>Postcode:</Form.Label>
           <Form.Control type="text" name="postalcode" required />
           <Form.Control.Feedback type="invalid">
@@ -103,7 +103,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group controlId="leeftijd">
+                    <Form.Group controlId="leeftijd" className="mt-3">
           <Form.Label>Leeftijdscategorie</Form.Label>
           <FormControl as="select" required>
             <option value=""></option>
@@ -120,7 +120,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group controlId="email">
+                    <Form.Group controlId="email" className="mt-3">
           <Form.Label>E-Mail adres:</Form.Label>
           <Form.Control type="text" name="email" required />
           <Form.Control.Feedback type="invalid">
@@ -131,7 +131,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group controlId="nummer">
+                    <Form.Group controlId="nummer" className="mt-3">
           <Form.Label>Telefoonnummer:</Form.Label>
           <Form.Control type="text" name="telnumber" required />
           <Form.Control.Feedback type="invalid">
@@ -142,7 +142,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Row>
-          <Form.Group as={Col} controlId="benadering">
+                        <Form.Group as={Col} controlId="benadering" className="mt-3">
             <Form.Label>Voorkeur benadering</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
@@ -157,7 +157,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="onderzoek">
+                        <Form.Group as={Col} controlId="onderzoek" className="mt-3">
             <Form.Label>Voorkeur onderzoek</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
@@ -173,23 +173,18 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
           </Form.Group>
         </Row>
 
-        <Form.Check
-          type="checkbox"
-          label="Mogen commerciele partijen U benaderen?"
-          className="mt-3"
-        />
+        <Form.Check type="checkbox" label="Mogen commerciele partijen U benaderen?" className="mt-3" />
 
-        <Button variant="primary" type="submit" className="w-100 mt-3">
-          Maak account
-        </Button>
-        <p className="p-2">Heeft u al een account?</p>
+        <Button variant="primary" type="submit" className="w-100 mt-3"> Maak account</Button>
+
+        <p className="p-2 mt-3">Heeft u al een account?</p>
 
         <Button
           href="ExpertLogin"
           variant="success"
           type="submit"
           size="sm"
-          className="mt-2 text-left"
+          className="mt-3 text-left"
         >
           Log hier in
         </Button>

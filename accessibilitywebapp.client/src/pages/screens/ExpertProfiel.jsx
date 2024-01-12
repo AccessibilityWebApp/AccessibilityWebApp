@@ -1,18 +1,26 @@
+import React, { useState } from "react";
+import { Container, Image, Form, FormControl, Button, Row, Col, Modal } from 'react-bootstrap';
 import PropTypes from "prop-types";
-import { Container, Image, Form, FormControl, Button } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
+import "@/pages/pages_css/ExpertProfiel.css";
 
-export const ExpertProfiel = ({ handleToExpertPortal }) => {
+const ExpertProfiel = ({ handleToExpertPortal }) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
-        <Container fluid className="margin mb-5">
-            <NavbarComponent />
+        <body className="achtergrond">
+            <Container fluid id="profile-form" className="w-50 p-5">
+                <NavbarComponent />
 
-            <div className="text-center">
-                <Image src="./icons/kou_logo.png" rounded />
-            </div>
-            
-            <Form className="mt-5">
-                <Form.Group controlId="formProfileName">
+                <div className="text-center">
+                    <Image src="./icons/kou_logo.png" rounded />
+                </div>
+                <Form>
+                    <Row className="mt-3"> 
+                        <Form.Group as={Col} controlId="formProfileName">
                     <Form.Label>Voorletters</Form.Label>
                     <FormControl
                         type="text"
@@ -20,15 +28,16 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
                     />
                     </Form.Group>
             
-                <Form.Group controlId="formProfileSurname">
+                        <Form.Group as={Col} controlId="formProfileSurname">
                     <Form.Label>Achternaam</Form.Label>
                     <FormControl
                         type="text"
                         placeholder="Gunus"
                     />
-                </Form.Group>
+                        </Form.Group>
+                </Row>
 
-                <Form.Group controlId="formProfilePostalcode">
+                    <Form.Group className="mt-3" controlId="formProfilePostalcode">
                     <Form.Label>Postcode</Form.Label>
                     <FormControl
                         type="text"
@@ -76,9 +85,9 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
                     <Form.Label>Beperking</Form.Label>
                     <FormControl as="select" required>
                         <option value="">Kies een beperking</option>
-                        <option value="option1">Blind</option>
-                        <option value="option2">Doof</option>
-                        <option value="option3">ADHD</option>
+                        <option value="option1">Optie1</option>
+                        <option value="option2">Optie2</option>
+                        <option value="option3">Optie3</option>
                     </FormControl>
                 </Form.Group>
 
@@ -87,11 +96,30 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
                     Bevestig
                 </Button>
 
-                <Button variant="danger" type="submit" className="Knop">
-                    Verwijder Account
-                </Button>
-            </Form>
-        </Container>
+
+                    <Button variant="danger" type="button" className="Knop" onClick={handleShow}>
+                        Verwijder Account
+                    </Button>
+
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Verwijder Account</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            Weet u zeker dat u uw account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Annuleren
+                            </Button>
+                            <Button variant="danger" onClick={handleClose}>
+                                Verwijderen
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
+                </Form>
+            </Container>
+        </body>
     );
 };
 
