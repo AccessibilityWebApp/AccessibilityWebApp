@@ -20,6 +20,14 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
                     />
                 </Form.Group>
 
+                <Form.Group controlId="formProfileName">
+                    <Form.Label>Bedrijfsnaam</Form.Label>
+                    <FormControl
+                        type="text"
+                        placeholder="KPN"
+                    />
+                </Form.Group>
+
                 <Form.Group controlId="formProfileSurname">
                     <Form.Label>Beschrijving</Form.Label>
                     <FormControl
@@ -54,7 +62,7 @@ export const CompanyProfiel = ({ handleToExpertPortal }) => {
 
                 <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
                     <Form.Label>Contactpersoon</Form.Label>
-                    <FormControl
+                    <FormControl className="mb-3"
                         type="text"
                         placeholder="Mohamed Rahim"
                     />
