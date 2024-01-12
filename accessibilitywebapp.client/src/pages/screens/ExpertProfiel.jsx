@@ -10,7 +10,7 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
             <div className="text-center">
                 <Image src="./icons/kou_logo.png" rounded />
             </div>
-
+            
             <Form className="mt-5">
                 <Form.Group controlId="formProfileName">
                     <Form.Label>Voorletters</Form.Label>
@@ -18,8 +18,8 @@ export const ExpertProfiel = ({ handleToExpertPortal }) => {
                         type="text"
                         placeholder="M."
                     />
-                </Form.Group>
-
+                    </Form.Group>
+            
                 <Form.Group controlId="formProfileSurname">
                     <Form.Label>Achternaam</Form.Label>
                     <FormControl

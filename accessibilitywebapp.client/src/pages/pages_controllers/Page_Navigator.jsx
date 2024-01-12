@@ -62,7 +62,7 @@ const PageNavigator = () => {
                 <Route path="/company_portal" element={<CompanyPortal />} />
                 <Route path="/ExpertProfiel" element={<ExpertProfiel />} />
                 <Route path="/BedrijfProfiel" element={<BedrijfProfiel />} />
-                <Route index element={<Navigate to="/BedrijfProfiel" />} />
+                <Route index element={<Navigate to="/portal" />} />
             </Routes>
         </div>
     );

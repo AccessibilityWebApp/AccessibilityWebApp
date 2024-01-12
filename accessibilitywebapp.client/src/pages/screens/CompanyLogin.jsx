@@ -1,64 +1,70 @@
+import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
 import PropTypes from "prop-types";
 import "@/pages/pages_css/Login.css";
 
-export const CompanyLogin = ({ handleToAanmeld, handleToPortal, handleToCompanyPortal }) => {
+const CompanyLogin = ({
+    handleToAanmeld,
+    handleToPortal,
+    handleToExpertPortal,
+}) => {
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+    };
+
     return (
-        <div className="inlogpagina">
-            <div className="div">
-                <div className="frame" />
-                <div className="overlap-group">
-                    <div className="frame-2" />
-                    <img className="frame-3" alt="logo" src="/icons/logo.png" />
-                </div>
+        <body className="achtergrond">
+            <div id="login-form">
+                <h1>Inloggen</h1>
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    <Form.Group controlId="username">
+                        <Form.Label>Gebruikersnaam:</Form.Label>
+                        <Form.Control type="text" name="username" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw gebruikersnaam in.
+                        </Form.Control.Feedback>
+                    </Form.Group>
 
-                <div className="LoginFrame">
-                    <div className="frame-4">
-                        <div className="text-wrapper">Log in</div>
-                        <div className="overlap-wrapper">
-                            <input
-                                type="text"
-                                className="entry-box"
-                                placeholder="Gebruiker"
-                            />
-                        </div>
+                    <Form.Group controlId="password">
+                        <Form.Label>Wachtwoord:</Form.Label>
+                        <Form.Control type="password" name="password" required />
+                        <Form.Control.Feedback type="invalid">
+                            Vul uw wachtwoord in.
+                        </Form.Control.Feedback>
+                    </Form.Group>
 
-                        <div className="group">
-                            <input
-                                type="password"
-                                className="entry-box"
-                                placeholder="Wachtwoord"
-                            />
-                        </div>
+                    <Form.Check type="checkbox" label="Blijf ingelogd" className="mt-1" />
 
-                        <div className="frame-5">
-                            <input type="checkbox" className="checkbox" />
-                            <div className="text-wrapper-2">Onthoud mij</div>
-                        </div>
+                    <Button href="company_portal" variant="primary" type="submit">
+                        Aanmelden
+                    </Button>
+                    <Button
+                        href="company_signup"
+                        variant="success"
+                        type="submit"
+                        className="m-3">
+                        Registreren
+                    </Button>
 
-                        <div className="frame-6">
-                            <div className="rectangle2" onClick={handleToPortal}>Terug</div>
-                            <div className="rectangle3" onClick={handleToCompanyPortal}>Volgende</div>
-                        </div>
-
-                        <div className="frame-7">
-                            <div className="text-wrapper-5">Wachtwoord vergeten?</div>
-                        </div>
-
-                        <div className="frame-8">
-                            <div className="text-wrapper-4">Heb je nog geen account?</div>
-                            <div className="aanmelden" onClick={handleToAanmeld}>Meld je hier aan</div>
-                        </div>
-                    </div>
-                </div>
+                    <a href="" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
+                </Form>
             </div>
-        </div>
+        </body>
     );
 };
 
 CompanyLogin.propTypes = {
     handleToAanmeld: PropTypes.func.isRequired,
     handleToPortal: PropTypes.func.isRequired,
-    handleToCompanyPortal: PropTypes.func.isRequired,
+    handleToExpertPortal: PropTypes.func.isRequired,
 };
 
 export default CompanyLogin;
