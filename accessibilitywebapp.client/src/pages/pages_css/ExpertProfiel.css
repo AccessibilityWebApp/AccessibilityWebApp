@@ -5,7 +5,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-    #profile-form h1 {
+#profile-form h1 {
         text-align: center;
         padding: 20px 0;
         font-weight: bold;
@@ -15,4 +15,9 @@
 .achtergrond {
     background: linear-gradient(to right, #3051ea, #19a783);
     height: 100vh
+}
+
+.tab {
+    background-color: gray;
+    color: white;
 }
